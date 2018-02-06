@@ -1,2 +1,4 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Regression checklist","News Feeds - All of the titles on the page","ERROR","2018-01-31T13:33:29.048-05:00[America/New_York]","0.0","10.49"
+"Regression checklist","News Feeds - All of the titles on the page","ERROR","2018-02-06T15:58:14.073-05:00[America/New_York]","0.0","12.0"
+"Regression checklist spanish","(Spanish) Forms of Assistance - Federal Agency filter with the first seven types","FAILURE","2018-02-06T16:14:29.81-05:00[America/New_York]","0.0","20.0"
+"Regression checklist spanish","(Spanish) Forms of Assistance - Federal Agency filter with the next seven types","FAILURE","2018-02-06T16:14:49.921-05:00[America/New_York]","0.0","20.66"
