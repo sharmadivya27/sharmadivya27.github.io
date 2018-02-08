@@ -1,0 +1,2790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.03/jquery.cycle.all.min.js"></script>
+  <style type="text/css">
+    body {
+      position: relative;
+      float: left;
+      width: 100%;
+    }
+    .slideshow {
+      height: 510px;
+      margin: 20px 0;
+    }
+    .slide {
+      background-color: #FFF !important;
+      width: 100% !important;
+      height: 510px !important;
+    }
+    .prev {
+      margin-left: -10px;
+      margin-right: 10px;
+    }
+    .next,
+    .prev {
+      cursor: pointer;
+      background-color: #e7e7e7;
+      border: 2px solid #eee;
+      height: 400px;
+      margin-top: 60px;
+    }
+
+    .prev span:before,
+    .next span:before {
+      font-size: 35px;
+      padding: 10px;
+      display: block;
+      font-family: "FontAwesome";
+      margin-top: 165px;
+      display: block;
+    }
+
+    .prev span:before {
+      content:"\f0d9";
+    }
+    .next span:before {
+      content:"\f0da";
+    }
+    .list-group-item.checked a:after {
+      color: #23e343;
+    }
+    .list-group-item a span {
+      word-wrap: break-word;
+      width: 95%;
+      display: block;
+    }
+    .list-group-item a:after {
+      content:"\f00c";
+      font-family: "FontAwesome";
+      color: #eae6e6;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+    .checked a {
+      color: #000;
+    }
+    .current {
+      background-color: #e7e7e7;
+    }
+    .threshold {
+      color: red;
+    }
+    .compare {
+      cursor: pointer;
+      margin-left: 20px;
+    }
+
+    .compare:before {
+      font-family: "FontAwesome";
+      content:"\f0c5";
+      font-size: 30px;
+    }
+    .compare-modal {
+      position:fixed;
+      margin:0;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      background:rgba(0,0,0,0.7);
+      overflow: scroll;
+      z-index: 1000;
+    }
+    .compare-container {
+      padding-bottom: 300px;
+      z-index: 1000;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .compare-container img{
+      margin-right: 20px;
+      max-width: 30%;
+    }
+  </style>
+  <script type="text/javascript">
+    $(function() {
+      $('.slideshow').cycle({
+        fx:     'scrollHorz',
+        speed:  300,
+        prev:   '.prev',
+        next:   '.next',
+        before: function (curr, next, opts) {
+          $('.current').removeClass('current');
+          var path = $(next).find('.path').attr('name');
+          $.each($('.list-group .list-group-item a'), function() {
+            if ($(this).attr('href').substring(1) == path) {
+              $(this).parent().addClass('checked');
+              $(this).parent().addClass('current');
+            }
+          })
+        },
+        timeout: 0
+      });
+
+      $('.list-group .list-group-item a').unbind().on('click', function(){
+        var href = $(this).attr('href').substring(1);
+
+        $('.slideshow').cycle($('.slide.'+href+':first').index());
+      })
+
+      $('.shot').unbind().on('click', function(e){
+        e.preventDefault();
+        var url = $(this).attr('href');
+        window.open(url,'_blank');
+      })
+
+      $('.compare').unbind().on('click', function(){
+        var slide = $(this).closest(".slide"),
+            newImage = slide.find('a.shot:eq(0)').attr('href'),
+            oldImage = slide.find('a.shot:eq(1)').attr('href'),
+            diffImage = slide.find('a.shot:eq(2)').attr('href');
+        $('.container').append('<div class="compare-modal"><div class="compare-container"><img src="'+newImage+'"/><img src="'+oldImage+'"/><img src="'+diffImage+'"/></div></div>');
+        $('.compare-modal').unbind().on('click', function(){
+          $(this).remove();
+        })
+      })
+    })
+</script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-3">
+        <div class="panel">
+          <div class="page-header">
+            <h4>List of screenshots for shots <small>taken 2018/02/08 11:12:50</small></h4>
+          </div>
+          <div class="panel-heading">Pages:</div>
+          <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item"><a href="#ESnews-feeds"><span>/ESnews-feeds</span></a></li>
+            
+            <li class="list-group-item"><a href="#news-feeds"><span>/news-feeds</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESapplication-checklist"><span>/ESapplication-checklist</span></a></li>
+            
+            <li class="list-group-item"><a href="#partners"><span>/partners</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESpartners"><span>/ESpartners</span></a></li>
+            
+            <li class="list-group-item"><a href="#EShome"><span>/EShome</span></a></li>
+            
+            <li class="list-group-item"><a href="#home"><span>/home</span></a></li>
+            
+            <li class="list-group-item"><a href="#accessibility"><span>/accessibility</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESaccessibility"><span>/ESaccessibility</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESforms"><span>/ESforms</span></a></li>
+            
+            <li class="list-group-item"><a href="#forms"><span>/forms</span></a></li>
+            
+            <li class="list-group-item"><a href="#foreign-disasters"><span>/foreign-disasters</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESforeign-disasters"><span>/ESforeign-disasters</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESoverview"><span>/ESoverview</span></a></li>
+            
+            <li class="list-group-item"><a href="#application-checklist"><span>/application-checklist</span></a></li>
+            
+            <li class="list-group-item"><a href="#overview"><span>/overview</span></a></li>
+            
+            <li class="list-group-item"><a href="#other-recovery-help"><span>/other-recovery-help</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESother-recovery-help"><span>/ESother-recovery-help</span></a></li>
+            
+            <li class="list-group-item"><a href="#EScontact-us"><span>/EScontact-us</span></a></li>
+            
+            <li class="list-group-item"><a href="#contact-us"><span>/contact-us</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESprivacy-policy"><span>/ESprivacy-policy</span></a></li>
+            
+            <li class="list-group-item"><a href="#privacy-policy"><span>/privacy-policy</span></a></li>
+            
+            <li class="list-group-item"><a href="#EScommunity-leaders"><span>/EScommunity-leaders</span></a></li>
+            
+            <li class="list-group-item"><a href="#community-leaders"><span>/community-leaders</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESfaqs"><span>/ESfaqs</span></a></li>
+            
+            <li class="list-group-item"><a href="#faqs"><span>/faqs</span></a></li>
+            
+            <li class="list-group-item"><a href="#download-plug-ins"><span>/download-plug-ins</span></a></li>
+            
+            <li class="list-group-item"><a href="#information"><span>/information</span></a></li>
+            
+            <li class="list-group-item"><a href="#moving-forward"><span>/moving-forward</span></a></li>
+            
+            <li class="list-group-item"><a href="#disabilities"><span>/disabilities</span></a></li>
+            
+            <li class="list-group-item"><a href="#fact-sheets"><span>/fact-sheets</span></a></li>
+            
+            <li class="list-group-item"><a href="#help"><span>/help</span></a></li>
+            
+            <li class="list-group-item"><a href="#about-us"><span>/about-us</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESfact-sheets"><span>/ESfact-sheets</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESdownload-plug-ins"><span>/ESdownload-plug-ins</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESdisaster-types"><span>/ESdisaster-types</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESassistance-by-federal-agency"><span>/ESassistance-by-federal-agency</span></a></li>
+            
+            <li class="list-group-item"><a href="#EShelp"><span>/EShelp</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESfind-assistance"><span>/ESfind-assistance</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESinformation"><span>/ESinformation</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESimmediate-needs"><span>/ESimmediate-needs</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESmoving-forward"><span>/ESmoving-forward</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESdisabilities"><span>/ESdisabilities</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESget-assistance"><span>/ESget-assistance</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESchildren-and-families"><span>/ESchildren-and-families</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESolder-americans"><span>/ESolder-americans</span></a></li>
+            
+            <li class="list-group-item"><a href="#get-assistance"><span>/get-assistance</span></a></li>
+            
+            <li class="list-group-item"><a href="#address-lookup"><span>/address-lookup</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESaddress-lookup"><span>/ESaddress-lookup</span></a></li>
+            
+            <li class="list-group-item"><a href="#immediate-needs"><span>/immediate-needs</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESabout-us"><span>/ESabout-us</span></a></li>
+            
+            <li class="list-group-item"><a href="#disaster-types"><span>/disaster-types</span></a></li>
+            
+            <li class="list-group-item"><a href="#children-and-families"><span>/children-and-families</span></a></li>
+            
+            <li class="list-group-item"><a href="#older-americans"><span>/older-americans</span></a></li>
+            
+            <li class="list-group-item"><a href="#assistance-by-federal-agency"><span>/assistance-by-federal-agency</span></a></li>
+            
+            <li class="list-group-item"><a href="#assistance-by-category"><span>/assistance-by-category</span></a></li>
+            
+            <li class="list-group-item"><a href="#ESassistance-by-category"><span>/ESassistance-by-category</span></a></li>
+            
+            <li class="list-group-item"><a href="#find-assistance"><span>/find-assistance</span></a></li>
+            
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-9">
+        <div class="slideshow-container">
+          <div class="prev col-sm-1"><span></span></div>
+          <div class="slideshow pull-left col-sm-10">
+            
+            
+            <div class="row slide ESnews-feeds">
+              <a class="path" name="ESnews-feeds"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESnews-feeds</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESnews-feeds/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESnews-feeds/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/información/canales-de-noticias/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESnews-feeds/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESnews-feeds/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/información/canales-de-noticias/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESnews-feeds/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESnews-feeds/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center threshold">12.62 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide news-feeds">
+              <a class="path" name="news-feeds"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /news-feeds</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="news-feeds/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/news-feeds/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/information/news-feeds/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="news-feeds/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/news-feeds/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/information/news-feeds/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="news-feeds/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/news-feeds/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center threshold">12.26 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESapplication-checklist">
+              <a class="path" name="ESapplication-checklist"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESapplication-checklist</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESapplication-checklist/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESapplication-checklist/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/obtener-asistencia/lista-de-verificación-para-aplicarse/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESapplication-checklist/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESapplication-checklist/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/obtener-asistencia/lista-de-verificación-para-aplicarse/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESapplication-checklist/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESapplication-checklist/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center threshold">10.32 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide partners">
+              <a class="path" name="partners"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /partners</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="partners/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/partners/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/about-us/partners/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="partners/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/partners/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/about-us/partners/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="partners/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/partners/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center threshold">9.91 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESpartners">
+              <a class="path" name="ESpartners"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESpartners</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESpartners/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESpartners/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/acerca-de/socios/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESpartners/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESpartners/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/acerca-de/socios/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESpartners/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESpartners/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center threshold">9.61 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide EShome">
+              <a class="path" name="EShome"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /EShome</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="EShome/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/EShome/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="EShome/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/EShome/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="EShome/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/EShome/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center threshold">7.47 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide home">
+              <a class="path" name="home"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /home</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="home/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/home/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="home/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/home/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="home/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/home/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center threshold">7.45 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide accessibility">
+              <a class="path" name="accessibility"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /accessibility</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="accessibility/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/accessibility/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/help/accessibility/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="accessibility/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/accessibility/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/help/accessibility/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="accessibility/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/accessibility/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center threshold">6.72 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESaccessibility">
+              <a class="path" name="ESaccessibility"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESaccessibility</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESaccessibility/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESaccessibility/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/ayuda/accesibilidad/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESaccessibility/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESaccessibility/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/ayuda/accesibilidad/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESaccessibility/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESaccessibility/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center threshold">6.62 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESforms">
+              <a class="path" name="ESforms"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESforms</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESforms/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESforms/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/obtener-asistencia/formularios/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESforms/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESforms/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/obtener-asistencia/formularios/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESforms/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESforms/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center threshold">6.1 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide forms">
+              <a class="path" name="forms"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /forms</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="forms/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/forms/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/get-assistance/forms/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="forms/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/forms/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/get-assistance/forms/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="forms/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/forms/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center threshold">5.79 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide foreign-disasters">
+              <a class="path" name="foreign-disasters"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /foreign-disasters</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="foreign-disasters/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/foreign-disasters/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/information/foreign-disasters/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="foreign-disasters/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/foreign-disasters/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/information/foreign-disasters/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="foreign-disasters/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/foreign-disasters/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center threshold">5.2 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESforeign-disasters">
+              <a class="path" name="ESforeign-disasters"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESforeign-disasters</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESforeign-disasters/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESforeign-disasters/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/información/desastres-en-el-extranjero/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESforeign-disasters/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESforeign-disasters/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/información/desastres-en-el-extranjero/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESforeign-disasters/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESforeign-disasters/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center threshold">5.18 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESoverview">
+              <a class="path" name="ESoverview"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESoverview</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESoverview/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESoverview/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/acerca-de/descripción-general/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESoverview/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESoverview/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/acerca-de/descripción-general/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESoverview/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESoverview/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">4.84 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide application-checklist">
+              <a class="path" name="application-checklist"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /application-checklist</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="application-checklist/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/application-checklist/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/get-assistance/application-checklist/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="application-checklist/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/application-checklist/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/get-assistance/application-checklist/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="application-checklist/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/application-checklist/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">4.72 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide overview">
+              <a class="path" name="overview"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /overview</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="overview/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/overview/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/about-us/overview/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="overview/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/overview/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/about-us/overview/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="overview/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/overview/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">4.65 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide other-recovery-help">
+              <a class="path" name="other-recovery-help"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /other-recovery-help</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="other-recovery-help/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/other-recovery-help/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/get-assistance/other-recovery-help/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="other-recovery-help/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/other-recovery-help/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/get-assistance/other-recovery-help/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="other-recovery-help/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/other-recovery-help/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">3.39 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESother-recovery-help">
+              <a class="path" name="ESother-recovery-help"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESother-recovery-help</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESother-recovery-help/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESother-recovery-help/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/obtener-asistencia/otra-ayuda-para-recuperación/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESother-recovery-help/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESother-recovery-help/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/obtener-asistencia/otra-ayuda-para-recuperación/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESother-recovery-help/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESother-recovery-help/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">3.37 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide EScontact-us">
+              <a class="path" name="EScontact-us"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /EScontact-us</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="EScontact-us/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/EScontact-us/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/ayuda/contáctenos/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="EScontact-us/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/EScontact-us/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/ayuda/contáctenos/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="EScontact-us/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/EScontact-us/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">3.16 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide contact-us">
+              <a class="path" name="contact-us"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /contact-us</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="contact-us/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/contact-us/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/help/contact-us/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="contact-us/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/contact-us/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/help/contact-us/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="contact-us/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/contact-us/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">3.02 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESprivacy-policy">
+              <a class="path" name="ESprivacy-policy"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESprivacy-policy</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESprivacy-policy/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESprivacy-policy/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/ayuda/política-de-privacidad/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESprivacy-policy/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESprivacy-policy/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/ayuda/política-de-privacidad/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESprivacy-policy/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESprivacy-policy/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">1.94 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide privacy-policy">
+              <a class="path" name="privacy-policy"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /privacy-policy</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="privacy-policy/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/privacy-policy/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/help/privacy-policy/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="privacy-policy/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/privacy-policy/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/help/privacy-policy/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="privacy-policy/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/privacy-policy/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">1.89 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide EScommunity-leaders">
+              <a class="path" name="EScommunity-leaders"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /EScommunity-leaders</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="EScommunity-leaders/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/EScommunity-leaders/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/obtener-asistencia/líderes-comunitarios/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="EScommunity-leaders/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/EScommunity-leaders/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/obtener-asistencia/líderes-comunitarios/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="EScommunity-leaders/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/EScommunity-leaders/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.82 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide community-leaders">
+              <a class="path" name="community-leaders"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /community-leaders</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="community-leaders/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/community-leaders/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/get-assistance/community-leaders/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="community-leaders/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/community-leaders/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/get-assistance/community-leaders/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="community-leaders/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/community-leaders/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.76 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESfaqs">
+              <a class="path" name="ESfaqs"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESfaqs</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESfaqs/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESfaqs/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/node/14930/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESfaqs/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESfaqs/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/node/14930/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESfaqs/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESfaqs/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.68 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide faqs">
+              <a class="path" name="faqs"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /faqs</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="faqs/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/faqs/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/help/faqs/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="faqs/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/faqs/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/help/faqs/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="faqs/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/faqs/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.66 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide download-plug-ins">
+              <a class="path" name="download-plug-ins"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /download-plug-ins</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="download-plug-ins/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/download-plug-ins/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/help/download-plug-ins/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="download-plug-ins/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/download-plug-ins/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/help/download-plug-ins/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="download-plug-ins/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/download-plug-ins/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.11 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide information">
+              <a class="path" name="information"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /information</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="information/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/information/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/information/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="information/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/information/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/information/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="information/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/information/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.11 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide moving-forward">
+              <a class="path" name="moving-forward"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /moving-forward</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="moving-forward/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/moving-forward/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/information/moving-forward/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="moving-forward/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/moving-forward/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/information/moving-forward/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="moving-forward/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/moving-forward/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.11 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide disabilities">
+              <a class="path" name="disabilities"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /disabilities</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="disabilities/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/disabilities/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/information/disabilities-access-and-functional-needs/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="disabilities/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/disabilities/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/information/disabilities-access-and-functional-needs/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="disabilities/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/disabilities/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.11 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide fact-sheets">
+              <a class="path" name="fact-sheets"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /fact-sheets</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="fact-sheets/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/fact-sheets/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/information/fact-sheets/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="fact-sheets/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/fact-sheets/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/information/fact-sheets/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="fact-sheets/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/fact-sheets/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.11 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide help">
+              <a class="path" name="help"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /help</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="help/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/help/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/help/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="help/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/help/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/help/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="help/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/help/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.11 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide about-us">
+              <a class="path" name="about-us"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /about-us</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="about-us/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/about-us/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/about-us/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="about-us/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/about-us/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/about-us/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="about-us/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/about-us/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.11 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESfact-sheets">
+              <a class="path" name="ESfact-sheets"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESfact-sheets</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESfact-sheets/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESfact-sheets/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/información/hojas-de-datos/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESfact-sheets/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESfact-sheets/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/información/hojas-de-datos/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESfact-sheets/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESfact-sheets/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.1 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESdownload-plug-ins">
+              <a class="path" name="ESdownload-plug-ins"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESdownload-plug-ins</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESdownload-plug-ins/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESdownload-plug-ins/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/ayuda/descargar-plug-ins/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESdownload-plug-ins/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESdownload-plug-ins/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/ayuda/descargar-plug-ins/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESdownload-plug-ins/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESdownload-plug-ins/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.1 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESdisaster-types">
+              <a class="path" name="ESdisaster-types"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESdisaster-types</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESdisaster-types/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESdisaster-types/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/información/los-recursos-del-desastre/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESdisaster-types/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESdisaster-types/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/información/los-recursos-del-desastre/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESdisaster-types/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESdisaster-types/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.07 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESassistance-by-federal-agency">
+              <a class="path" name="ESassistance-by-federal-agency"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESassistance-by-federal-agency</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESassistance-by-federal-agency/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESassistance-by-federal-agency/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/obtener-asistencia/asistencia-por-agencia-federal/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESassistance-by-federal-agency/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESassistance-by-federal-agency/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/obtener-asistencia/asistencia-por-agencia-federal/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESassistance-by-federal-agency/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESassistance-by-federal-agency/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide EShelp">
+              <a class="path" name="EShelp"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /EShelp</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="EShelp/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/EShelp/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/ayuda/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="EShelp/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/EShelp/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/ayuda/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="EShelp/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/EShelp/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESfind-assistance">
+              <a class="path" name="ESfind-assistance"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESfind-assistance</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESfind-assistance/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESfind-assistance/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/obtener-asistencia/encuentre-asistencia/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESfind-assistance/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESfind-assistance/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/obtener-asistencia/encuentre-asistencia/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESfind-assistance/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESfind-assistance/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESinformation">
+              <a class="path" name="ESinformation"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESinformation</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESinformation/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESinformation/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/información/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESinformation/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESinformation/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/información/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESinformation/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESinformation/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESimmediate-needs">
+              <a class="path" name="ESimmediate-needs"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESimmediate-needs</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESimmediate-needs/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESimmediate-needs/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/información/necesidades-inmediatas/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESimmediate-needs/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESimmediate-needs/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/información/necesidades-inmediatas/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESimmediate-needs/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESimmediate-needs/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESmoving-forward">
+              <a class="path" name="ESmoving-forward"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESmoving-forward</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESmoving-forward/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESmoving-forward/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/información/próximo-paso/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESmoving-forward/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESmoving-forward/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/información/próximo-paso/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESmoving-forward/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESmoving-forward/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESdisabilities">
+              <a class="path" name="ESdisabilities"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESdisabilities</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESdisabilities/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESdisabilities/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/información/discapacidades-o-necesidades-funcionales-y-de-acceso/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESdisabilities/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESdisabilities/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/información/discapacidades-o-necesidades-funcionales-y-de-acceso/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESdisabilities/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESdisabilities/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESget-assistance">
+              <a class="path" name="ESget-assistance"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESget-assistance</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESget-assistance/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESget-assistance/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/obtener-asistencia/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESget-assistance/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESget-assistance/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/obtener-asistencia/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESget-assistance/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESget-assistance/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESchildren-and-families">
+              <a class="path" name="ESchildren-and-families"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESchildren-and-families</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESchildren-and-families/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESchildren-and-families/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/información/niños-y-familias/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESchildren-and-families/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESchildren-and-families/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/información/niños-y-familias/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESchildren-and-families/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESchildren-and-families/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESolder-americans">
+              <a class="path" name="ESolder-americans"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESolder-americans</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESolder-americans/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESolder-americans/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/información/adultos-mayores-estadounidenses/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESolder-americans/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESolder-americans/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/información/adultos-mayores-estadounidenses/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESolder-americans/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESolder-americans/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide get-assistance">
+              <a class="path" name="get-assistance"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /get-assistance</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="get-assistance/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/get-assistance/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/get-assistance/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="get-assistance/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/get-assistance/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/get-assistance/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="get-assistance/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/get-assistance/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide address-lookup">
+              <a class="path" name="address-lookup"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /address-lookup</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="address-lookup/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/address-lookup/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/address-lookup/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="address-lookup/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/address-lookup/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/address-lookup/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="address-lookup/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/address-lookup/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESaddress-lookup">
+              <a class="path" name="ESaddress-lookup"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESaddress-lookup</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESaddress-lookup/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESaddress-lookup/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/buscador-de-direcciones/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESaddress-lookup/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESaddress-lookup/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/buscador-de-direcciones/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESaddress-lookup/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESaddress-lookup/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide immediate-needs">
+              <a class="path" name="immediate-needs"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /immediate-needs</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="immediate-needs/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/immediate-needs/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/information/immediate-needs/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="immediate-needs/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/immediate-needs/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/information/immediate-needs/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="immediate-needs/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/immediate-needs/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESabout-us">
+              <a class="path" name="ESabout-us"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESabout-us</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESabout-us/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESabout-us/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/acerca-de/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESabout-us/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESabout-us/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/acerca-de/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESabout-us/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESabout-us/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide disaster-types">
+              <a class="path" name="disaster-types"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /disaster-types</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="disaster-types/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/disaster-types/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/information/disaster-types/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="disaster-types/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/disaster-types/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/information/disaster-types/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="disaster-types/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/disaster-types/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide children-and-families">
+              <a class="path" name="children-and-families"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /children-and-families</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="children-and-families/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/children-and-families/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/information/children-and-families/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="children-and-families/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/children-and-families/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/information/children-and-families/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="children-and-families/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/children-and-families/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide older-americans">
+              <a class="path" name="older-americans"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /older-americans</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="older-americans/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/older-americans/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/information/older-americans/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="older-americans/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/older-americans/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/information/older-americans/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="older-americans/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/older-americans/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide assistance-by-federal-agency">
+              <a class="path" name="assistance-by-federal-agency"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /assistance-by-federal-agency</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="assistance-by-federal-agency/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/assistance-by-federal-agency/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/get-assistance/assistance-by-federal-agency/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="assistance-by-federal-agency/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/assistance-by-federal-agency/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/get-assistance/assistance-by-federal-agency/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="assistance-by-federal-agency/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/assistance-by-federal-agency/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide assistance-by-category">
+              <a class="path" name="assistance-by-category"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /assistance-by-category</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="assistance-by-category/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/assistance-by-category/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/get-assistance/assistance-by-category/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="assistance-by-category/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/assistance-by-category/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/get-assistance/assistance-by-category/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="assistance-by-category/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/assistance-by-category/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide ESassistance-by-category">
+              <a class="path" name="ESassistance-by-category"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /ESassistance-by-category</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESassistance-by-category/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESassistance-by-category/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/es/obtener-asistencia/asistencia-por-egoría/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="ESassistance-by-category/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESassistance-by-category/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/es/obtener-asistencia/asistencia-por-egoría/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="ESassistance-by-category/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/ESassistance-by-category/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.03 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+            
+            <div class="row slide find-assistance">
+              <a class="path" name="find-assistance"></a>
+              <div class="col-sm-12 text-center">
+                
+                
+                <h4>1280px - /find-assistance</h4>
+                
+                
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="find-assistance/1280_casperjs_prod.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/find-assistance/1280_casperjs_prod.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="http://www.disasterassistance.gov/get-assistance/find-assistance/?mobile=unL9HuS">prod</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                <a class="shot" href="find-assistance/1280_casperjs_staging.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/find-assistance/1280_casperjs_staging.png">
+                </a>
+                <p class="text-center"><a target="_blank" href="https://staging.disasterassistance.gov/get-assistance/find-assistance/?mobile=unL9HuS">staging</a></p>
+              </div>
+              
+              <div class="col-sm-4">
+                
+                <a class="shot" href="find-assistance/1280_casperjs_diff.png">
+                  <img class="short-screenshot img-thumbnail" src="thumbnails/find-assistance/1280_casperjs_diff.png">
+                </a>
+                
+                <p class="text-center">diff</p>
+              </div>
+              <div class="difference col-sm-12">
+                
+                
+                <h4 class="text-center text-muted">0.01 % different<span class="compare"></span></h4>
+                
+                
+              </div>
+            </div>
+            
+            
+          </div>
+          <div class="next col-sm-1"><span></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
