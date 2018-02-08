@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Regression checklist spanish","(Spanish) Community Leaders - Results of the quick search items","ERROR","2018-02-08T11:02:06.032-05:00[America/New_York]","0.0","51.42"
+"Regression checklist spanish","(Spanish) Forms of Assistance - Federal Agency filter with the first seven types","FAILURE","2018-02-08T11:06:10.02-05:00[America/New_York]","0.0","20.03"
+"Regression checklist spanish","(Spanish) Forms of Assistance - Federal Agency filter with the next seven types","FAILURE","2018-02-08T11:06:30.117-05:00[America/New_York]","0.0","20.62"
