@@ -1,0 +1,296 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="/DAC/javascript/eventUtils.js"></script>
+  <script type="text/javascript" src="/DAC/javascript/jquery/jquery.js"></script>
+  <script type="text/javascript" src="/DAC/javascript/HSMenuFunc.js"></script>
+  <script type="text/javascript" src="/DAC/javascript/placeFocus.js"></script>
+  <!-- this script will call placeFocus() -->
+  <script type="text/javascript" src="/DAC/javascript/cc/defaultLoad.js"></script>
+  <script type="text/javascript" src="/DAC/javascript/titlePage.js"></script>
+
+  <link rel="stylesheet" href="/DAC/css/fema_styles.css" type="text/css" media="screen and (min-width: 801px)" />
+<link rel="stylesheet" href="/DAC/css/fema_styles8by6.css" type="text/css" media="screen and (max-width: 800px)" />
+<link rel="stylesheet" href="/DAC/css/hs_styles.css" type="text/css" />     
+<link rel="stylesheet" href="/DAC/css/iac.css" type="text/css" />
+<link rel="stylesheet" href="/DAC/css/iac8by6.css" type="text/css" media="screen and (max-width: 800px)" />
+<link rel="stylesheet" href="/DAC/css/govben.css" type="text/css" />
+<link rel="stylesheet" href="/DAC/css/govbenButtons.css" type="text/css" />
+<link rel="stylesheet" href="/DAC/css/ajax.css" type="text/css" />
+  <title>
+	 
+	  
+			Disaster Assistance Center - CAPTCHA
+	  
+	  
+  </title>
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1252" />
+  <meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />	
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE" />	
+	<meta name="keywords" content="Disaster Assistance" />
+	<meta name="description" content="Disaster Assistance" />
+	<meta name="language" content="en,es" />
+	<style type="text/css">
+		#dialogBody 
+		{
+			display:block;
+		}
+		#busyScreenBody
+		{
+			display:none;
+		}	
+	</style>        
+<script type="text/javascript">
+function bodyLoad() {
+	if (window.showMenuForPage){
+			showMenuForPage();
+	}
+	if(window.placeFocus){
+			placeFocus();
+	}
+	if (window.ExtendDocumentTitle){
+			ExtendDocumentTitle.run();
+	}			
+	if (ErrorContainerHandler.placeFocus){
+			ErrorContainerHandler.placeFocus();
+	}		
+}
+
+
+var menu = [ { mainmenuIdName: 'Sentinel', selectedImg: 'empty', unselectedImg: 'empty', submenuDivName: 'empty'} ];
+
+
+var currentMainMenuItemName = 'MM_Home';
+var currentSubMenuItemName = '';
+
+	
+var timerID = "";
+
+
+</script>
+  <noscript>This application requires JavaScript.Please turn on scripting in your browser to proceed. </noscript>
+  <!-- This script disables the right mouse click -->
+  <script type="text/javascript"> 
+  document.oncontextmenu=new Function("return false") 
+</script>
+  <script type="text/javascript">
+&lt;!--
+window.history.forward(1);
+//--&gt;
+</script>
+  
+	
+<!-- Begin Google Analytics -->
+
+					<script type="text/javascript">var gaTrackingID = 'UA-29788218-1';</script>
+					<script type="text/javascript" src="/DAC/javascript/googleAnalyticsTrackingCode.js"></script>
+
+<!-- End Google Analytics -->
+  <script type="text/javascript" src="/DAC/javascript/disableAutoComplete.js"></script>
+ </head>
+<body bgcolor="#FFFFFF" onload="if (window.bodyLoad) bodyLoad();">
+<div class="skipnav"><a href="#pageContent">skip to main content</a></div>
+<div class="skipnav"><a href="#MainMenu">skip to main menu</a></div>
+ 
+ 
+ 
+
+
+
+
+
+<!-- remove this div if you don't want these links.  
+	 Otherwise, correct the links accordingly -->
+
+<div id="linkbar">
+	<a href="" onclick="javascript: helpWin=window.open('/DAC/help.do?application=ai&amp;bundle=ai&amp;property=footer.text.contact', 'help_window', 'top=10,left=100,width=700,height=500,menubar=0,location=0,status=0,scrollbars=1,resizable=0,toolbar=0'); helpWin.focus(); return false;">Contact Us</a>
+</div>
+
+
+
+
+
+<!-- Get/Set image Path  -->
+<script type="text/javascript">
+addMenuData('MM_Home', '/DAC/images/menu/en/mmSelectedBlank.gif', '/DAC/images/menu/en/mmUnselecedSelectedBlank.gif', 'SM_Home' );
+</script>
+
+  <table class="siteLayout" align="center" cellpadding="0" cellspacing="0">
+     <tbody><tr>
+       <td class="leftSide" rowspan="2"></td>
+       <td class="top"></td>
+       <td class="rightSide" rowspan="2"></td>
+     </tr>
+     <tr>
+       <td>
+         <div class="siteBorder">
+           <div id="mainMenuBar"></div><table class="mainLayoutTable" align="center" cellpadding="0" border="0" cellspacing="0">  
+             <thead>
+              <!-- header -->
+              
+              
+             </thead>
+             <tbody>
+            <!--  Header row class="headerRow"   -->
+              <tr class="headerRow" onmouseenter="if(window.showMenuForPage) showMenuForPage();">
+                 <td class="headerRowLeft">
+                    
+
+
+<img id="logo" src="/DAC/images/Color_Logo_DisasterAssistance_EN.gif" border="0" alt="Disaster Assistance - Access to Disaster Help and Resources" longdesc=" " width="357px" height="45px" />      
+                    <!-- Main Menu Table -->
+<div id="MainMenu" style="position:absolute; left:60px; top:104px;" tabindex="-1">
+<table style="width:100%;" cellpadding="0" cellspacing="0" border="0">
+<tbody><tr>	 <td width="175">
+		<a href="https://www.disasterassistance.gov/daip_en.portal;DAC-PROD12C-DC2-PUBLIC-SESSION-ID=bDaLCmWeZaYRrQvDR2NPOkhOK2zJcXM-YNxglb7IGrdYkgUDz4In!1312306782!-1083753579" onmouseover="showMainmenu('MM_Home')" onfocus="showMainmenu('MM_Home')" title="Disaster Assistance" id="MM_Home"><div class="currentmainmenu">Disaster Assistance</div></a>
+	</td>
+	<td style="border-right:0px"> </td>
+</tr>
+</tbody></table>
+</div>
+
+<!-- Sub Menu HTML -->
+
+<div id="SM_Home" style="position: absolute; left: 60px; top: 126px; visibility: visible;">
+<table border="0">
+<tbody><tr class="submenuRow">
+</tr>
+</tbody></table></div>
+<div id="skip-main-menu" tabindex="-1">
+</div>
+
+                 </td>
+                 <td align="right">
+                  <span class="versionNumUnderTitle">
+
+
+
+	<br /><br /><br />
+	
+	Version: 7.00.00.02.1199
+	<br />Server: DAC-PROD12C-DC2-PUBLIC
+                
+
+</span>
+                 </td>
+              </tr>
+              <tr class="bodyRow" onmouseenter="if(window.showMenuForPage) showMenuForPage();">
+                 <td colspan="2">	
+                    <table cellspacing="0" cellpadding="0" border="0" style="height: 100%; width: 100%">
+                      <tbody><tr><td id="pageContent" class="pageContent" tabindex="-1">
+                        
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	var Captcha = {};
+	Captcha.focusCaptcha = function ()
+	{
+		document.getElementById("captchaResponse").value = "";
+		document.getElementById("captchaResponse").focus();
+	}
+	
+	Captcha.cancel = function () 
+	{
+		document.getElementById("cancelCaptcha").value = "true";
+	}
+</script>
+
+
+
+<form name="dacCaptchaForm" method="post" action="/DAC/CaptchaAccept.do;DAC-PROD12C-DC2-PUBLIC-SESSION-ID=bDaLCmWeZaYRrQvDR2NPOkhOK2zJcXM-YNxglb7IGrdYkgUDz4In!1312306782!-1083753579" autocomplete="off">
+  <table align="center" cellspacing="10" cellpadding="1">
+    <tbody><tr>
+      <td align="center" class="txt12">
+        <a href="/DAC/TextCaptchaAccept.do?gbsessionid=A082F010414468E3B9F79477082ED1BA.daip_rulesengine_21518456165">
+          If you cannot view the image for any reason, please click here to proceed.
+        </a>
+      </td>
+    </tr>
+  </tbody></table>
+  <table align="center" cellspacing="10" cellpadding="1">
+    <tbody><tr>
+      <td align="center" class="txt16b"><label for="captchaResponse">Please type the characters appearing in the picture or return to the <a href="displayPage.do?forward=home">Home Page</a> to cancel.</label></td>
+    </tr>
+    <tr>
+      <td align="center" class="txt12">
+        Note: You can try no more than three times.
+        
+          This is your first try.
+        
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        
+        
+          
+        
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="/DAC/jcaptcha.jpg?guid=635da9e08efb4627bb92cc80cea09ddb" alt="Text Image" />
+      </td>
+    </tr>
+    <tr>
+      <td align="center"><input type="text" name="captchaResponse" value="" id="captchaResponse" autocomplete="off" /></td>
+    </tr>
+  </tbody></table>
+  <br />
+  <br />
+  <div id="captchaBtnSection">
+    <button type="submit" name="submit" id="btnSubmit" alt="???en.img.button.alt.submit???" onmouseover="this.className='gbButtonActive'" onmouseout="this.className='gbButton'" onfocus="this.className='gbButtonActive'" onblur="this.className='gbButton'" value="Submit" style="width:92px" class="gbButton">Submit</button>
+    <button type="submit" name="reset" id="btnReset" alt="???en.img.button.alt.reset???" onmouseover="this.className='gbButtonActive'" onmouseout="this.className='gbButton'" onfocus="this.className='gbButtonActive'" onblur="this.className='gbButton'" value="Reset" style="width:92px" class="gbButton" onclick="Captcha.focusCaptcha(); return false;">Reset</button>
+    <button type="submit" name="cancel" id="btnCancel" alt="???en.img.button.alt.cancel???" onmouseover="this.className='gbButtonActive'" onmouseout="this.className='gbButton'" onfocus="this.className='gbButtonActive'" onblur="this.className='gbButton'" value="Cancel" style="width:92px" class="gbButton" onclick="Captcha.cancel();">Cancel</button>
+  </div>  
+  
+  <input type="hidden" name="gbsessionid" value="A082F010414468E3B9F79477082ED1BA.daip_rulesengine_21518456165" autocomplete="off" />
+  <input type="hidden" name="attempt" value="1" autocomplete="off" />
+  <input type="hidden" name="captchaType" value="image" autocomplete="off" />
+  <input type="hidden" name="submittedForm" value="imageCaptcha" autocomplete="off" />
+  <input type="hidden" name="cancelCaptcha" value="false" id="cancelCaptcha" autocomplete="off" />
+</form>
+                      </td></tr>
+                    </tbody></table>
+                 </td>
+              </tr>
+           </tbody>
+          </table>
+        </div>
+      </td>
+    </tr>
+  </tbody></table>  
+	
+
+
+
+<script type="text/javascript" src="/DAC/javascript/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/DAC/javascript/timeout-dialog.js"></script>
+<link rel="stylesheet" href="/DAC/css/timeout-dialog.css" type="text/css" />	
+<script type="text/javascript">
+	var options = {'timeout' : 1260,
+		'countdown' : 60,
+		'title' : 'Your session is about to expire!',
+		'message' : 'You will be logged out in {0} seconds.',
+		'question': 'Do you want to stay signed in?',
+		'keep_alive_button_text': 'Yes, keep me signed in',
+		'sign_out_button_text': 'No, Sign me out',
+		'restart_on_yes' : true,
+		'logout_redirect_url' : '/DAC/logout.do' ,
+		'keep_alive_url': '/DAC/timeout.jsp?keepAlive&amp;'};
+	$.timeoutDialog(options);
+</script>
+
+
+
+  
+
+</body></html>
