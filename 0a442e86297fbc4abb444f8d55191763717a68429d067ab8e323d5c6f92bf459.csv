@@ -1,5 +1,4 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Regression checklist spanish","(Spanish) Community Leaders - Results of the quick search items","ERROR","2018-02-12T12:33:36.188-05:00[America/New_York]","0.0","54.1"
-"Regression checklist spanish","(Spanish) Forms of Assistance - Category Type filter with the next eight types","FAILURE","2018-02-12T12:36:49.298-05:00[America/New_York]","0.0","154.65"
-"Regression checklist spanish","(Spanish) Forms of Assistance - Federal Agency filter with the first seven types","FAILURE","2018-02-12T12:39:24.079-05:00[America/New_York]","0.0","65.03"
-"Regression checklist spanish","(Spanish) Forms of Assistance - Federal Agency filter with the next seven types","FAILURE","2018-02-12T12:40:29.213-05:00[America/New_York]","0.0","39.86"
+"Regression checklist spanish","(Spanish) Community Leaders - Results of the quick search items","ERROR","2018-02-13T10:44:25.911-05:00[America/New_York]","0.0","53.25"
+"Regression checklist spanish","(Spanish) Forms of Assistance - Federal Agency filter with the first seven types","FAILURE","2018-02-13T10:48:15.797-05:00[America/New_York]","0.0","18.3"
+"Regression checklist spanish","(Spanish) Forms of Assistance - Federal Agency filter with the next seven types","FAILURE","2018-02-13T10:48:34.253-05:00[America/New_York]","0.0","19.53"
