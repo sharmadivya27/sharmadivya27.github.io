@@ -1,4 +1,2 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Regression checklist","Find Assistance - Dynamically verify results of the questionnaire","FAILURE","2018-02-22T10:55:19.406-05:00[America/New_York]","0.0","24.92"
-"Regression checklist spanish","(Spanish) Homepage - Header - All the menu links on the ""Help"" tab","ERROR","2018-02-22T11:02:22.681-05:00[America/New_York]","0.0","29.64"
-"Regression checklist spanish","(Spanish) Community Leaders - Results of the quick search items","ERROR","2018-02-22T11:03:42.029-05:00[America/New_York]","0.0","44.83"
+"Regression checklist spanish","(Spanish) Community Leaders - Results of the quick search items","ERROR","2018-02-23T10:51:52.927-05:00[America/New_York]","0.0","58.75"
