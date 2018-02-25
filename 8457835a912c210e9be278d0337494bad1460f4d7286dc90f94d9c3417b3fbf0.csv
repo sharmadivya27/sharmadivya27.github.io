@@ -1,4 +1,4 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Regression checklist","Homepage - ""Apply Online"" DAC page includes mobile string","SKIPPED","2018-02-23T10:46:27.056-05:00[America/New_York]","0.0","10.14"
-"Regression checklist","Homepage - ""Check Status"" DAC page includes mobile string","SKIPPED","2018-02-23T10:46:37.2-05:00[America/New_York]","0.0","10.13"
-"Regression checklist","Homepage - ""Apply Online"" from the questionnaire DAC page includes mobile string","SKIPPED","2018-02-23T10:46:47.331-05:00[America/New_York]","0.0","38.32"
+"Regression checklist","Homepage - ""Apply Online"" DAC page includes mobile string","SKIPPED","2018-02-25T12:39:30.293-05:00[America/New_York]","0.0","10.24"
+"Regression checklist","Homepage - ""Check Status"" DAC page includes mobile string","SKIPPED","2018-02-25T12:39:40.537-05:00[America/New_York]","0.0","10.22"
+"Regression checklist","Homepage - ""Apply Online"" from the questionnaire DAC page includes mobile string","SKIPPED","2018-02-25T12:39:50.759-05:00[America/New_York]","0.0","38.5"
