@@ -1,0 +1,56 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>Network Error</title>
+<meta name="author" content="Booz Allen Hamilton Security" />
+<meta name="description" content="Booz Allen Hamilton TCP Error Policy" />
+<style type="text/css" media="screen">
+body {
+     margin:50px 0px;
+     padding:0px;
+     text-align:center;
+     }
+
+#content {
+	 width:890px;
+	 margin:0px auto;
+	 text-align:center;
+         font-family: Arial, Helvetica, sans-serif;
+         font-size: 14px;
+         color: #666;
+	 padding:15px;
+	 border:3px outset #003366;
+	 background-color:#fff;
+	 }
+
+table {
+      table-layout:fixed;
+      width:100%;
+      font-size: 14px;
+      color: #666;
+      word-break:break-all;
+      }
+
+.details-column-left {
+                     text-align:right;
+                     padding-right:2px;
+                     color: #666;
+                     }
+
+.details-column-right {
+                      text-align:left;
+                      padding-left:2px;
+                      color: #000066;
+                      }
+
+</style></head>
+
+
+<body>
+<div id="content">
+<img src="http://www.boozallen.com/etc/designs/boozallen/img/imported/bah-logo_for_print.gif" alt="Booz Allen Hamilton." /><p></p>
+<font size="4"><font color="#E0001B">Attention: </font>Connection Timed Out</font>
+<p></p>
+<font size="3"></font> The Web Server for "<font color="#E0001B">http://disasterassistance.gov/es</font>" may be down, too busy, or experiencing other problems preventing it from responding to requests. You may wish to try again at a later time. <p></p>
+</div>
+
+
+</body></html>

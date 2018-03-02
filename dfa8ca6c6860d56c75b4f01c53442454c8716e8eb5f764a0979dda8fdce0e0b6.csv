@@ -1,3 +1,2 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Regression checklist spanish","(Spanish) Forms of Assistance - Federal Agency filter with the first seven types","FAILURE","2018-02-16T10:58:28.974-05:00[America/New_York]","0.0","16.2"
-"Regression checklist spanish","(Spanish) Forms of Assistance - Federal Agency filter with the next seven types","FAILURE","2018-02-16T10:58:45.226-05:00[America/New_York]","0.0","18.35"
+"Regression checklist spanish","(Spanish) Homepage - Header - All the menu links on the ""Information"" tab","FAILURE","2018-03-02T12:45:23.58-05:00[America/New_York]","0.0","203.21"

@@ -50,11 +50,11 @@
     <script class="code" type="text/javascript">$(document).ready(function () {
         var plot1 = $.jqplot('coverage_pie_chart', [
             [
-                ['Passing', 44],
+                ['Passing', 42],
                 ['Pending', 0],
                 ['Ignored', 0],
-                ['Failing', 0],
-                ['Errors',  3],
+                ['Failing', 1],
+                ['Errors',  4],
                 ['Compromised',  0],
                 ['Untested',  0],
             ]
@@ -83,11 +83,11 @@
                 marginTop: '15px'
             },
             series: [
-                {label: '44 requirements tested successfully'},
+                {label: '42 requirements tested successfully'},
                 {label: '0 requirements pending'},
                 {label: '0} requirements skipped'},
-                {label: '0} requirements with failures'},
-                {label: '3} requirements with errors'},
+                {label: '1} requirements with failures'},
+                {label: '4} requirements with errors'},
                 {label: '0} requirements compromised'},
                 {label: '0} requirements untested'},
             ]
@@ -187,7 +187,7 @@
             <a href="#"><i class="fa fa-comments-o"></i> Stories</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 01-03-2018 10:19</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 02-03-2018 12:44</span>
     <br style="clear:left"/>
 </div>
 
@@ -227,8 +227,8 @@
                                 <tr>
                                     <td class="summary-leading-column"><a href="#test-results-table">Acceptance Criteria (tests)</a></td>
                                     <td>47</td>
-                                    <td>44</td>
-                                    <td>3</td>
+                                    <td>42</td>
+                                    <td>5</td>
                                     <td>0</td>
                                     <td>0</td>
                                     <td></td>
@@ -258,8 +258,8 @@
         <tr>
             <td class="summary-leading-column">Automated</td>
             <td>47</td>
-            <td>44 (94%)</td>
-            <td>3 (6%)</td>
+            <td>42 (89%)</td>
+            <td>5 (11%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
         </tr>
@@ -274,14 +274,14 @@
         <tr>
             <td class="summary-leading-column">Total</td>
             <td>47</td>
-            <td>44 (94%)</td>
-            <td>3 (6%)</td>
+            <td>42 (89%)</td>
+            <td>5 (11%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
         </tr>
         <tr>
             <td class="summary-leading-column">Total Duration</td>
-                <td colspan="5">5 minutes 58 seconds</td>
+                <td colspan="5">9 minutes 13 seconds</td>
         </tr>
         </body>
     </table>
@@ -328,32 +328,32 @@
                                 <td class="SUCCESS-text">63</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-03-01 10:19:11">10:19:11</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-02 12:44:36">12:44:36</td>
 
-                                <td class="SUCCESS-text">45.17</td>
+                                <td class="SUCCESS-text">46.78</td>
                             </tr>
 
-                            <tr class="test-SUCCESS">
-                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                            <tr class="test-FAILURE">
+                                <td><span class="summary-icon"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></span>
                                     
-                                    <span style="display:none">SUCCESS</span></td>
-                                <td class="SUCCESS-text">
+                                    <span style="display:none">FAILURE</span></td>
+                                <td class="FAILURE-text">
                                     <div class="ellipsis">
 
                                         <a href="40d0b70f285a87dfa43c10f102590d985e349add931868c9145ffb65b1686438.html" class="ellipsis"
-                                           title="(Spanish) Homepage - Header - All the menu links on the 'Information' tab ">
+                                           title="(Spanish) Homepage - Header - All the menu links on the 'Information' tab Element should be enabled exception: ...">
                                             (Spanish) Homepage - Header - All the menu links on the &quot;Information&quot; tab&nbsp;(9  examples)
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="SUCCESS-text">63</td>
+                                <td class="FAILURE-text">62</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-03-01 10:19:56">10:19:56</td>
+                                <td class="FAILURE-text" data-sort="2018-03-02 12:45:23">12:45:23</td>
 
-                                <td class="SUCCESS-text">45.61</td>
+                                <td class="FAILURE-text">203.21</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -374,9 +374,9 @@
                                 <td class="SUCCESS-text">14</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-03-01 10:20:42">10:20:42</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-02 12:48:47">12:48:47</td>
 
-                                <td class="SUCCESS-text">10.51</td>
+                                <td class="SUCCESS-text">9.67</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -397,9 +397,9 @@
                                 <td class="SUCCESS-text">35</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-03-01 10:20:52">10:20:52</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-02 12:48:56">12:48:56</td>
 
-                                <td class="SUCCESS-text">25.25</td>
+                                <td class="SUCCESS-text">26.84</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -420,9 +420,9 @@
                                 <td class="SUCCESS-text">21</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-03-01 10:21:17">10:21:17</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-02 12:49:23">12:49:23</td>
 
-                                <td class="SUCCESS-text">14.53</td>
+                                <td class="SUCCESS-text">18.44</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -443,9 +443,9 @@
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-03-01 10:21:32">10:21:32</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-02 12:49:41">12:49:41</td>
 
-                                <td class="SUCCESS-text">4.06</td>
+                                <td class="SUCCESS-text">4.63</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -466,9 +466,9 @@
                                 <td class="SUCCESS-text">8</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-03-01 10:21:36">10:21:36</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-02 12:49:46">12:49:46</td>
 
-                                <td class="SUCCESS-text">8.18</td>
+                                <td class="SUCCESS-text">9.71</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -489,9 +489,9 @@
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-03-01 10:21:44">10:21:44</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-02 12:49:56">12:49:56</td>
 
-                                <td class="SUCCESS-text">12.66</td>
+                                <td class="SUCCESS-text">10.12</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -512,9 +512,9 @@
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-03-01 10:21:57">10:21:57</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-02 12:50:06">12:50:06</td>
 
-                                <td class="SUCCESS-text">5.42</td>
+                                <td class="SUCCESS-text">5.88</td>
                             </tr>
 
                             <tr class="test-ERROR">
@@ -535,9 +535,9 @@
                                 <td class="ERROR-text">35</td>
 
 
-                                <td class="ERROR-text" data-sort="2018-03-01 10:22:02">10:22:02</td>
+                                <td class="ERROR-text" data-sort="2018-03-02 12:50:12">12:50:12</td>
 
-                                <td class="ERROR-text">48.24</td>
+                                <td class="ERROR-text">33.43</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -558,9 +558,9 @@
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-03-01 10:22:51">10:22:51</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-02 12:50:45">12:50:45</td>
 
-                                <td class="SUCCESS-text">10.04</td>
+                                <td class="SUCCESS-text">9.69</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -581,9 +581,9 @@
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-03-01 10:23:01">10:23:01</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-02 12:50:55">12:50:55</td>
 
-                                <td class="SUCCESS-text">8.93</td>
+                                <td class="SUCCESS-text">8.24</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -604,9 +604,9 @@
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-03-01 10:23:10">10:23:10</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-02 12:51:04">12:51:04</td>
 
-                                <td class="SUCCESS-text">13.78</td>
+                                <td class="SUCCESS-text">16.11</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -627,9 +627,9 @@
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-03-01 10:23:24">10:23:24</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-02 12:51:20">12:51:20</td>
 
-                                <td class="SUCCESS-text">24.48</td>
+                                <td class="SUCCESS-text">53.88</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -650,9 +650,9 @@
                                 <td class="SUCCESS-text">14</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-03-01 10:23:48">10:23:48</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-02 12:52:14">12:52:14</td>
 
-                                <td class="SUCCESS-text">30.44</td>
+                                <td class="SUCCESS-text">34.08</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -673,9 +673,9 @@
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-03-01 10:24:19">10:24:19</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-02 12:52:48">12:52:48</td>
 
-                                <td class="SUCCESS-text">6.89</td>
+                                <td class="SUCCESS-text">6.42</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -696,9 +696,9 @@
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-03-01 10:24:26">10:24:26</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-02 12:52:54">12:52:54</td>
 
-                                <td class="SUCCESS-text">11.55</td>
+                                <td class="SUCCESS-text">7.26</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -719,9 +719,9 @@
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-03-01 10:24:37">10:24:37</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-02 12:53:02">12:53:02</td>
 
-                                <td class="SUCCESS-text">11.6</td>
+                                <td class="SUCCESS-text">7.22</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -742,32 +742,32 @@
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-03-01 10:24:49">10:24:49</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-02 12:53:09">12:53:09</td>
 
-                                <td class="SUCCESS-text">11.84</td>
+                                <td class="SUCCESS-text">36.47</td>
                             </tr>
 
-                            <tr class="test-SUCCESS">
-                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                            <tr class="test-ERROR">
+                                <td><span class="summary-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
                                     
-                                    <span style="display:none">SUCCESS</span></td>
-                                <td class="SUCCESS-text">
+                                    <span style="display:none">ERROR</span></td>
+                                <td class="ERROR-text">
                                     <div class="ellipsis">
 
                                         <a href="1b9a2e4eeaa2e4d203753921bb54fdff6d77acf41c6c0384a93fc9c9f322ba7b.html" class="ellipsis"
-                                           title="(Spanish) Forms of Assistance - Federal Agency filter with the next seven types ">
+                                           title="(Spanish) Forms of Assistance - Federal Agency filter with the next seven types Web driver exception: The following e...">
                                             (Spanish) Forms of Assistance - Federal Agency filter with the next seven types
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="SUCCESS-text">6</td>
+                                <td class="ERROR-text">5</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-03-01 10:25:01">10:25:01</td>
+                                <td class="ERROR-text" data-sort="2018-03-02 12:53:45">12:53:45</td>
 
-                                <td class="SUCCESS-text">9.47</td>
+                                <td class="ERROR-text">5.23</td>
                             </tr>
                         </tbody>
                     </table>
