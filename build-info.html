@@ -36,13 +36,13 @@
     <script class="code" type="text/javascript">$(document).ready(function () {
         var test_results_plot = $.jqplot('test_results_pie_chart', [
             [
-                ['Passing', 0.62585],
+                ['Passing', 0.918367],
                 
                 ['Pending', 0],
                 
                 ['Ignored', 0],
                 
-                ['Failing', 0],
+                ['Failing', 0.047619],
                 
                 ['Errors',  0.020408]
             ]
@@ -73,23 +73,23 @@
                 marginTop: '15px'
             },
             series: [
-                {label: '92 / 147 tests passed' },
+                {label: '135 / 147 tests passed' },
                 {label: '0 / 147 tests pending'},
                 {label: '0 / 147 tests not executed'},
-                {label: '0 / 147 tests failed'},
+                {label: '7 / 147 tests failed'},
                 {label: '3 / 147 errors'}
             ]
         });
 
         var weighted_test_results_plot = $.jqplot('weighted_test_results_pie_chart', [
             [
-                ['Passing', 0.96752],
+                ['Passing', 0.918307],
                 
                 ['Pending', 0],
                 
                 ['Ignored', 0],
                 
-                ['Failing', 0],
+                ['Failing', 0.049213],
                 
                 ['Errors', 0.020669]
             ]
@@ -121,10 +121,10 @@
                 marginTop: '15px'
             },
             series: [
-                {label: '92 / 147 tests passed (0.96752% of all test steps)' },
+                {label: '135 / 147 tests passed (0.918307% of all test steps)' },
                 {label: '0 / 147 tests pending'},
                 {label: '0 / 147 tests not executed'},
-                {label: '0 / 147 tests failed (0% of all test steps)'},
+                {label: '7 / 147 tests failed (0.049213% of all test steps)'},
                 {label: '3 / 147 errors (0.020669% of all test steps)'}
             ]
         });
@@ -192,7 +192,7 @@
             <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 09-03-2018 11:14</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 12-03-2018 14:38</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
