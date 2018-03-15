@@ -1,3 +1,4 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Regression checklist spanish","(Spanish) Community Leaders - Results of the quick search items","ERROR","2018-03-14T11:03:44.966-04:00[America/New_York]","0.0","34.49"
-"Regression checklist spanish","(Spanish) Sitemap - All links in Sitemap point to the right page","FAILURE","2018-03-14T11:06:30.341-04:00[America/New_York]","0.0","189.83"
+"Regression checklist spanish","(Spanish) Community Leaders - Results of the quick search items","ERROR","2018-03-15T12:13:57.582-04:00[America/New_York]","0.0","85.44"
+"Regression checklist spanish","(Spanish) Find Assistance - Spanish benefits results display according to use cases","FAILURE","2018-03-15T12:15:46.439-04:00[America/New_York]","0.0","19.97"
+"Regression checklist spanish","(Spanish) Sitemap - All links in Sitemap point to the right page","FAILURE","2018-03-15T12:18:00.229-04:00[America/New_York]","0.0","399.14"

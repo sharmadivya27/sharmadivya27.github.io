@@ -1,2 +1,4 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Regression checklist","Sitemap - All links in Sitemap point to the right page","FAILURE","2018-03-14T10:57:57.026-04:00[America/New_York]","0.0","195.51"
+"Regression checklist","Find Assistance - Dynamically verify results of the questionnaire","FAILURE","2018-03-15T12:04:09.545-04:00[America/New_York]","0.0","27.28"
+"Regression checklist","Community Leaders - Type keyword into search bar","ERROR","2018-03-15T12:06:02.463-04:00[America/New_York]","0.0","10.41"
+"Regression checklist","Sitemap - All links in Sitemap point to the right page","FAILURE","2018-03-15T12:06:12.979-04:00[America/New_York]","0.0","218.89"
