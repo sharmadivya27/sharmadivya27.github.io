@@ -1,3 +1,4 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Regression checklist","Sitemap - All links in Sitemap point to the right page","FAILURE","2018-03-16T16:35:08.468-04:00[America/New_York]","0.0","158.67"
-"Regression checklist spanish","(Spanish) Sitemap - All links in Sitemap point to the right page","FAILURE","2018-03-16T16:42:43.501-04:00[America/New_York]","0.0","153.4"
+"Regression checklist","Find Assistance - Dynamically verify results of the questionnaire","FAILURE","2018-03-19T12:06:01.655-04:00[America/New_York]","0.0","26.17"
+"Regression checklist","Sitemap - All links in Sitemap point to the right page","FAILURE","2018-03-19T12:08:05.216-04:00[America/New_York]","0.0","302.76"
+"Regression checklist spanish","(Spanish) Sitemap - All links in Sitemap point to the right page","FAILURE","2018-03-19T12:21:06.676-04:00[America/New_York]","0.0","275.9"
