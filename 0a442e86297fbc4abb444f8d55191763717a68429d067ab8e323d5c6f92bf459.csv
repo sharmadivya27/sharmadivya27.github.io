@@ -1,4 +1,4 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Regression checklist spanish","(Spanish) Community Leaders - Results of the quick search items","ERROR","2018-03-26T10:36:04.388-04:00[America/New_York]","0.0","47.08"
-"Regression checklist spanish","(Spanish) Find Assistance - Dynamically verify results of the questionnaire","FAILURE","2018-03-26T10:37:30.816-04:00[America/New_York]","0.0","25.78"
-"Regression checklist spanish","(Spanish) Sitemap - All links in Sitemap point to the right page","FAILURE","2018-03-26T10:39:26.897-04:00[America/New_York]","0.0","256.95"
+"Regression checklist spanish","(Spanish) Community Leaders - Results of the quick search items","ERROR","2018-03-27T13:16:14.293-04:00[America/New_York]","0.0","51.02"
+"Regression checklist spanish","(Spanish) Community Leaders - Type keyword into search bar","ERROR","2018-03-27T13:19:20.929-04:00[America/New_York]","0.0","10.0"
+"Regression checklist spanish","(Spanish) Sitemap - All links in Sitemap point to the right page","FAILURE","2018-03-27T13:19:30.99-04:00[America/New_York]","0.0","238.01"

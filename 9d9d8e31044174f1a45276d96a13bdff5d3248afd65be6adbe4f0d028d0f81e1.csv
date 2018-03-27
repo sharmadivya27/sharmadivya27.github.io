@@ -1,4 +1,4 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Regression checklist","Homepage - ""Apply Online"" DAC page includes mobile flag","SKIPPED","2018-03-26T10:27:26.245-04:00[America/New_York]","0.0","10.16"
-"Regression checklist","Homepage - ""Check Status"" DAC page includes mobile flag","SKIPPED","2018-03-26T10:27:36.406-04:00[America/New_York]","0.0","10.15"
-"Regression checklist","Verify external feeds within DisasterAssistance.gov","SKIPPED","2018-03-26T10:32:38.28-04:00[America/New_York]","0.0","0.01"
+"Regression checklist","Homepage - ""Apply Online"" DAC page includes mobile flag","SKIPPED","2018-03-27T13:08:29.518-04:00[America/New_York]","0.0","10.15"
+"Regression checklist","Homepage - ""Check Status"" DAC page includes mobile flag","SKIPPED","2018-03-27T13:08:39.672-04:00[America/New_York]","0.0","10.13"
+"Regression checklist","Verify pre/early feeds within DisasterAssistance.gov","SKIPPED","2018-03-27T13:13:01.901-04:00[America/New_York]","0.0","10.2"
