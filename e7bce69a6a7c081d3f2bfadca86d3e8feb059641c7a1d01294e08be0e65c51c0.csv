@@ -1,2 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Regression checklist","Sitemap - All links in Sitemap point to the right page","FAILURE","2018-03-28T11:44:45.758-04:00[America/New_York]","0.0","208.51"
+"Regression checklist","Forms of Assistance - Federal Agency filter with the next seven types","ERROR","2018-03-28T18:57:26.613-04:00[America/New_York]","0.0","3.38"
+"Regression checklist","Sitemap - All links in Sitemap point to the right page","FAILURE","2018-03-28T18:57:58.377-04:00[America/New_York]","0.0","173.21"
