@@ -1,5 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Regression checklist","Find Assistance - Benefits results display according to use cases","FAILURE","2018-04-18T12:20:10.588-04:00[America/New_York]","0.0","18.35"
-"Regression checklist","Forms of Assistance - Category Type filter with the next eight types","FAILURE","2018-04-18T12:21:39.714-04:00[America/New_York]","0.0","6.54"
-"Regression checklist","Forms of Assistance - Federal Agency filter with the first seven types","FAILURE","2018-04-18T12:21:46.366-04:00[America/New_York]","0.0","7.8"
-"Regression checklist","Homepage - USA search feeds display results","FAILURE","2018-04-18T12:26:06.639-04:00[America/New_York]","0.0","11.22"
+"Regression checklist","Homepage - Footer - All the links in ""Additional Links""","FAILURE","2018-04-19T11:15:58.304-04:00[America/New_York]","0.0","81.16"
+"Regression checklist","Homepage - USA search feeds display results","FAILURE","2018-04-19T11:17:19.691-04:00[America/New_York]","0.0","16.4"
