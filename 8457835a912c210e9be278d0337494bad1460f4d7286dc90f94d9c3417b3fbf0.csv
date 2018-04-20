@@ -1,3 +1,5 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Regression checklist","Homepage - ""Apply Online"" DAC page includes mobile flag","SKIPPED","2018-04-19T11:11:35.079-04:00[America/New_York]","0.0","10.04"
-"Regression checklist","Homepage - ""Check Status"" DAC page includes mobile flag","SKIPPED","2018-04-19T11:11:45.123-04:00[America/New_York]","0.0","10.03"
+"Regression checklist","Homepage - ""Apply Online"" DAC page includes mobile flag","SKIPPED","2018-04-20T11:57:06.105-04:00[America/New_York]","0.0","10.15"
+"Regression checklist","Homepage - ""Check Status"" DAC page includes mobile flag","SKIPPED","2018-04-20T11:57:16.258-04:00[America/New_York]","0.0","10.13"
+"Regression checklist","Sitemap - All links in Sitemap point to the right page","SKIPPED","2018-04-20T11:57:36.083-04:00[America/New_York]","0.0","143.97"
+"Regression checklist","Homepage - Footer - All the links in ""Additional Links""","SKIPPED","2018-04-20T12:00:00.071-04:00[America/New_York]","0.0","46.63"
