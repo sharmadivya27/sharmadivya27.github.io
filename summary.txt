@@ -1,4 +1,4 @@
-Serenity report generated 22-04-2018 12:09
+Serenity report generated 23-04-2018 11:22
 52 test scenarios (224 tests in all, including 190 rows of test data)
 
 Passed:             44
