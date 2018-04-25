@@ -1,2 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Regression checklist","Forms of Assistance - Federal Agency filter with the next seven types","ERROR","2018-04-22T11:57:06.108-04:00[America/New_York]","0.0","3.46"
+"Regression checklist","Forms of Assistance - Federal Agency filter with the next seven types","ERROR","2018-04-25T11:36:07.244-04:00[America/New_York]","0.0","3.56"
+"Regression checklist","Homepage - Footer - All the links in ""Additional Links""","FAILURE","2018-04-25T11:40:02.706-04:00[America/New_York]","0.0","90.79"

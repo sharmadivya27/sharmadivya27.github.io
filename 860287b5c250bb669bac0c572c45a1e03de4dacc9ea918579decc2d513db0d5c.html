@@ -50,11 +50,11 @@
     <script class="code" type="text/javascript">$(document).ready(function () {
         var plot1 = $.jqplot('coverage_pie_chart', [
             [
-                ['Passing', 1],
+                ['Passing', 0],
                 ['Pending', 0],
                 ['Ignored', 0],
                 ['Failing', 0],
-                ['Errors',  1],
+                ['Errors',  2],
                 ['Compromised',  0],
                 ['Untested',  0],
             ]
@@ -83,11 +83,11 @@
                 marginTop: '15px'
             },
             series: [
-                {label: '1 requirements tested successfully'},
+                {label: '0 requirements tested successfully'},
                 {label: '0 requirements pending'},
                 {label: '0} requirements skipped'},
                 {label: '0} requirements with failures'},
-                {label: '1} requirements with errors'},
+                {label: '2} requirements with errors'},
                 {label: '0} requirements compromised'},
                 {label: '0} requirements untested'},
             ]
@@ -186,7 +186,7 @@
             <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 23-04-2018 11:04</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 25-04-2018 11:30</span>
     <br style="clear:left"/>
 </div>
 
@@ -225,7 +225,7 @@
                                     <tr>
                                         <td class="summary-leading-column"><a href="#requirements-tabs">Stories</a></td>
                                         <td>2</td>
-                                        <td>1</td>
+                                        <td>0</td>
                                         <td>0</td>
                                         <td>0</td>
                                         <td>0</td>
@@ -234,10 +234,10 @@
                                 <tr>
                                     <td class="summary-leading-column"><a href="#test-results-table">Acceptance Criteria (tests)</a></td>
                                     <td>224</td>
-                                    <td>96</td>
-                                    <td>4</td>
+                                    <td>215</td>
+                                    <td>7</td>
                                     <td>0</td>
-                                    <td>124</td>
+                                    <td>2</td>
                                     <td></td>
                                 </tr>
                                 </body>
@@ -265,10 +265,10 @@
         <tr>
             <td class="summary-leading-column">Automated</td>
             <td>224</td>
-            <td>96 (43%)</td>
-            <td>4 (2%)</td>
+            <td>215 (96%)</td>
+            <td>7 (3%)</td>
             <td>0 (0%)</td>
-            <td>124 (55%)</td>
+            <td>2 (1%)</td>
         </tr>
         <tr>
             <td class="summary-leading-column">Manual</td>
@@ -281,14 +281,14 @@
         <tr>
             <td class="summary-leading-column">Total</td>
             <td>224</td>
-            <td>96 (43%)</td>
-            <td>4 (2%)</td>
+            <td>215 (96%)</td>
+            <td>7 (3%)</td>
             <td>0 (0%)</td>
-            <td>124 (55%)</td>
+            <td>2 (1%)</td>
         </tr>
         <tr>
             <td class="summary-leading-column">Total Duration</td>
-                <td colspan="5">18 minutes 3 seconds</td>
+                <td colspan="5">24 minutes 42 seconds</td>
         </tr>
         </body>
     </table>
@@ -325,14 +325,14 @@
 
 
 
-                <tr class="test-SUCCESS requirementRow">
+                <tr class="test-ERROR requirementRow">
                     <td class="requirementRowCell">
-                        <span class="status_icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
-                        <span style="display:none">1</span>
+                        <span class="status_icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
+                        <span style="display:none">4</span>
                     </td>
                     <td class="cardNumber requirementRowCell"></td>
 
-                    <td class="SUCCESS-text requirementRowCell">
+                    <td class="ERROR-text requirementRowCell">
                         <a href="javaScript:void(0)" class="read-more-link">
                             <img src="images/plus.png" height="16"/></a>
                         <span class="requirementName"><a
@@ -346,10 +346,10 @@ I want to run the daily regressions at least twice a day</div>
 
                     <td class="greentext highlighted-value requirementRowCell">113</td>
 <!--
-                    <td class="greentext requirementRowCell">50</td>
-                    <td class="bluetext requirementRowCell">63</td>
-                    <td class="redtext requirementRowCell">0</td>
-                    <td class="lightorangetext requirementRowCell">0</td>
+                    <td class="greentext requirementRowCell">109</td>
+                    <td class="bluetext requirementRowCell">2</td>
+                    <td class="redtext requirementRowCell">1</td>
+                    <td class="lightorangetext requirementRowCell">1</td>
                     <td class="violettext requirementRowCell">0</td>
 -->
                         <td class="greentext highlighted-value requirementRowCell">0</td>
@@ -366,72 +366,72 @@ I want to run the daily regressions at least twice a day</div>
 <table>
     <tr>
         <td width="40px">
-            <div class="small">44.2%</div>
+            <div class="small">96.5%</div>
         </td>
         <td width="125px">
             <div class="percentagebar"
                  title="  - Total tests: 113
-  - Passing tests: 50 (44.2%)
-  - Failing tests: 0 (0%)
-  - Tests with errors: 0 (0%)
+  - Passing tests: 109 (96.5%)
+  - Failing tests: 1 (0.9%)
+  - Tests with errors: 1 (0.9%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
-  - Ignored or skipped tests: 0 (55.8%)"
+  - Ignored or skipped tests: 0 (1.8%)"
                  style="width: 125px;">
                 <div class="pendingbar"
                      title="  - Total tests: 113
-  - Passing tests: 50 (44.2%)
-  - Failing tests: 0 (0%)
-  - Tests with errors: 0 (0%)
+  - Passing tests: 109 (96.5%)
+  - Failing tests: 1 (0.9%)
+  - Tests with errors: 1 (0.9%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
-  - Ignored or skipped tests: 0 (55.8%)"
+  - Ignored or skipped tests: 0 (1.8%)"
                      style="width: 125px;">
                     <div class="ignoredbar"
                          style="width: 125px;"
                          title="  - Total tests: 113
-  - Passing tests: 50 (44.2%)
-  - Failing tests: 0 (0%)
-  - Tests with errors: 0 (0%)
+  - Passing tests: 109 (96.5%)
+  - Failing tests: 1 (0.9%)
+  - Tests with errors: 1 (0.9%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
-  - Ignored or skipped tests: 0 (55.8%)">
+  - Ignored or skipped tests: 0 (1.8%)">
                         <div class="compromisedbar"
-                             style="width: 55px;"
+                             style="width: 123px;"
                              title="  - Total tests: 113
-  - Passing tests: 50 (44.2%)
-  - Failing tests: 0 (0%)
-  - Tests with errors: 0 (0%)
+  - Passing tests: 109 (96.5%)
+  - Failing tests: 1 (0.9%)
+  - Tests with errors: 1 (0.9%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
-  - Ignored or skipped tests: 0 (55.8%)">
+  - Ignored or skipped tests: 0 (1.8%)">
                             <div class="errorbar"
-                                 style="width: 55px;"
+                                 style="width: 123px;"
                                  title="  - Total tests: 113
-  - Passing tests: 50 (44.2%)
-  - Failing tests: 0 (0%)
-  - Tests with errors: 0 (0%)
+  - Passing tests: 109 (96.5%)
+  - Failing tests: 1 (0.9%)
+  - Tests with errors: 1 (0.9%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
-  - Ignored or skipped tests: 0 (55.8%)">
+  - Ignored or skipped tests: 0 (1.8%)">
                                 <div class="failingbar"
-                                     style="width: 55px;"
+                                     style="width: 122px;"
                                      title="  - Total tests: 113
-  - Passing tests: 50 (44.2%)
-  - Failing tests: 0 (0%)
-  - Tests with errors: 0 (0%)
+  - Passing tests: 109 (96.5%)
+  - Failing tests: 1 (0.9%)
+  - Tests with errors: 1 (0.9%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
-  - Ignored or skipped tests: 0 (55.8%)">
+  - Ignored or skipped tests: 0 (1.8%)">
                                     <div class="passingbar"
-                                         style="width: 55px;"
+                                         style="width: 121px;"
                                          title="  - Total tests: 113
-  - Passing tests: 50 (44.2%)
-  - Failing tests: 0 (0%)
-  - Tests with errors: 0 (0%)
+  - Passing tests: 109 (96.5%)
+  - Failing tests: 1 (0.9%)
+  - Tests with errors: 1 (0.9%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
-  - Ignored or skipped tests: 0 (55.8%)">
+  - Ignored or skipped tests: 0 (1.8%)">
                                     </div>
                                 </div>
                             </div>
@@ -468,9 +468,9 @@ I want to run the daily regressions at least twice a day</div>
 
                     <td class="greentext highlighted-value requirementRowCell">111</td>
 <!--
-                    <td class="greentext requirementRowCell">46</td>
-                    <td class="bluetext requirementRowCell">61</td>
-                    <td class="redtext requirementRowCell">0</td>
+                    <td class="greentext requirementRowCell">106</td>
+                    <td class="bluetext requirementRowCell">0</td>
+                    <td class="redtext requirementRowCell">1</td>
                     <td class="lightorangetext requirementRowCell">4</td>
                     <td class="violettext requirementRowCell">0</td>
 -->
@@ -488,72 +488,72 @@ I want to run the daily regressions at least twice a day</div>
 <table>
     <tr>
         <td width="40px">
-            <div class="small">41.4%</div>
+            <div class="small">95.5%</div>
         </td>
         <td width="125px">
             <div class="percentagebar"
                  title="  - Total tests: 111
-  - Passing tests: 46 (41.4%)
-  - Failing tests: 0 (0%)
+  - Passing tests: 106 (95.5%)
+  - Failing tests: 1 (0.9%)
   - Tests with errors: 4 (3.6%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
-  - Ignored or skipped tests: 0 (55%)"
+  - Ignored or skipped tests: 0 (0%)"
                  style="width: 125px;">
                 <div class="pendingbar"
                      title="  - Total tests: 111
-  - Passing tests: 46 (41.4%)
-  - Failing tests: 0 (0%)
+  - Passing tests: 106 (95.5%)
+  - Failing tests: 1 (0.9%)
   - Tests with errors: 4 (3.6%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
-  - Ignored or skipped tests: 0 (55%)"
+  - Ignored or skipped tests: 0 (0%)"
                      style="width: 125px;">
                     <div class="ignoredbar"
                          style="width: 125px;"
                          title="  - Total tests: 111
-  - Passing tests: 46 (41.4%)
-  - Failing tests: 0 (0%)
+  - Passing tests: 106 (95.5%)
+  - Failing tests: 1 (0.9%)
   - Tests with errors: 4 (3.6%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
-  - Ignored or skipped tests: 0 (55%)">
+  - Ignored or skipped tests: 0 (0%)">
                         <div class="compromisedbar"
-                             style="width: 56px;"
+                             style="width: 125px;"
                              title="  - Total tests: 111
-  - Passing tests: 46 (41.4%)
-  - Failing tests: 0 (0%)
+  - Passing tests: 106 (95.5%)
+  - Failing tests: 1 (0.9%)
   - Tests with errors: 4 (3.6%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
-  - Ignored or skipped tests: 0 (55%)">
+  - Ignored or skipped tests: 0 (0%)">
                             <div class="errorbar"
-                                 style="width: 56px;"
+                                 style="width: 125px;"
                                  title="  - Total tests: 111
-  - Passing tests: 46 (41.4%)
-  - Failing tests: 0 (0%)
+  - Passing tests: 106 (95.5%)
+  - Failing tests: 1 (0.9%)
   - Tests with errors: 4 (3.6%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
-  - Ignored or skipped tests: 0 (55%)">
+  - Ignored or skipped tests: 0 (0%)">
                                 <div class="failingbar"
-                                     style="width: 52px;"
+                                     style="width: 120px;"
                                      title="  - Total tests: 111
-  - Passing tests: 46 (41.4%)
-  - Failing tests: 0 (0%)
+  - Passing tests: 106 (95.5%)
+  - Failing tests: 1 (0.9%)
   - Tests with errors: 4 (3.6%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
-  - Ignored or skipped tests: 0 (55%)">
+  - Ignored or skipped tests: 0 (0%)">
                                     <div class="passingbar"
-                                         style="width: 52px;"
+                                         style="width: 119px;"
                                          title="  - Total tests: 111
-  - Passing tests: 46 (41.4%)
-  - Failing tests: 0 (0%)
+  - Passing tests: 106 (95.5%)
+  - Failing tests: 1 (0.9%)
   - Tests with errors: 4 (3.6%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
-  - Ignored or skipped tests: 0 (55%)">
+  - Ignored or skipped tests: 0 (0%)">
                                     </div>
                                 </div>
                             </div>
@@ -611,9 +611,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">63</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:04:01">11:04:01</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:30:14">11:30:14</td>
 
-                                <td class="SUCCESS-text">31.86</td>
+                                <td class="SUCCESS-text">43.57</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -634,9 +634,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">63</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:04:33">11:04:33</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:30:57">11:30:57</td>
 
-                                <td class="SUCCESS-text">47.12</td>
+                                <td class="SUCCESS-text">52.58</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -657,9 +657,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">14</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:05:20">11:05:20</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:31:50">11:31:50</td>
 
-                                <td class="SUCCESS-text">8.34</td>
+                                <td class="SUCCESS-text">10.94</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -680,9 +680,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">35</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:05:29">11:05:29</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:32:01">11:32:01</td>
 
-                                <td class="SUCCESS-text">20.05</td>
+                                <td class="SUCCESS-text">23.72</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -703,9 +703,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">21</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:05:49">11:05:49</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:32:25">11:32:25</td>
 
-                                <td class="SUCCESS-text">15.1</td>
+                                <td class="SUCCESS-text">13.95</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -726,9 +726,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:06:04">11:06:04</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:32:39">11:32:39</td>
 
-                                <td class="SUCCESS-text">5.73</td>
+                                <td class="SUCCESS-text">5.21</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -749,9 +749,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">8</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:06:10">11:06:10</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:32:44">11:32:44</td>
 
-                                <td class="SUCCESS-text">14.45</td>
+                                <td class="SUCCESS-text">22.89</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -772,9 +772,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:06:24">11:06:24</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:33:07">11:33:07</td>
 
-                                <td class="SUCCESS-text">8.94</td>
+                                <td class="SUCCESS-text">9.43</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -795,9 +795,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">4</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:06:33">11:06:33</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:33:16">11:33:16</td>
 
-                                <td class="SUCCESS-text">2.72</td>
+                                <td class="SUCCESS-text">3.63</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -818,9 +818,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">35</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:06:36">11:06:36</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:33:20">11:33:20</td>
 
-                                <td class="SUCCESS-text">27.83</td>
+                                <td class="SUCCESS-text">34.96</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -841,9 +841,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:07:04">11:07:04</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:33:55">11:33:55</td>
 
-                                <td class="SUCCESS-text">10.83</td>
+                                <td class="SUCCESS-text">17.46</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -864,9 +864,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:07:15">11:07:15</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:34:13">11:34:13</td>
 
-                                <td class="SUCCESS-text">7.62</td>
+                                <td class="SUCCESS-text">11.53</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -887,9 +887,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:07:22">11:07:22</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:34:24">11:34:24</td>
 
-                                <td class="SUCCESS-text">13.8</td>
+                                <td class="SUCCESS-text">14.12</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -910,9 +910,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:07:36">11:07:36</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:34:38">11:34:38</td>
 
-                                <td class="SUCCESS-text">24.49</td>
+                                <td class="SUCCESS-text">25.93</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -933,9 +933,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">14</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:08:01">11:08:01</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:35:04">11:35:04</td>
 
-                                <td class="SUCCESS-text">30.9</td>
+                                <td class="SUCCESS-text">32.2</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -956,9 +956,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:08:32">11:08:32</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:35:37">11:35:37</td>
 
-                                <td class="SUCCESS-text">4.57</td>
+                                <td class="SUCCESS-text">6.29</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -979,9 +979,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:08:36">11:08:36</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:35:43">11:35:43</td>
 
-                                <td class="SUCCESS-text">8.28</td>
+                                <td class="SUCCESS-text">8.45</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1002,9 +1002,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:08:44">11:08:44</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:35:51">11:35:51</td>
 
-                                <td class="SUCCESS-text">7.12</td>
+                                <td class="SUCCESS-text">8.08</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1025,32 +1025,32 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:08:52">11:08:52</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:36:00">11:36:00</td>
 
-                                <td class="SUCCESS-text">8.44</td>
+                                <td class="SUCCESS-text">7.17</td>
                             </tr>
 
-                            <tr class="test-SUCCESS">
-                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                            <tr class="test-ERROR">
+                                <td><span class="summary-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
                                     
-                                    <span style="display:none">SUCCESS</span></td>
-                                <td class="SUCCESS-text">
+                                    <span style="display:none">ERROR</span></td>
+                                <td class="ERROR-text">
                                     <div class="ellipsis">
 
                                         <a href="741ff53f964d7c299114e9ec06e89a914422be764d19b8ba058e33979eccc860.html" class="ellipsis"
-                                           title="Forms of Assistance - Federal Agency filter with the next seven types ">
+                                           title="Forms of Assistance - Federal Agency filter with the next seven types Web driver exception: The following e...">
                                             Forms of Assistance - Federal Agency filter with the next seven types
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="SUCCESS-text">6</td>
+                                <td class="ERROR-text">5</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:09:00">11:09:00</td>
+                                <td class="ERROR-text" data-sort="2018-04-25 11:36:07">11:36:07</td>
 
-                                <td class="SUCCESS-text">7.48</td>
+                                <td class="ERROR-text">3.56</td>
                             </tr>
 
                             <tr class="test-SKIPPED">
@@ -1071,9 +1071,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SKIPPED-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-04-23 11:09:08">11:09:08</td>
+                                <td class="SKIPPED-text" data-sort="2018-04-25 11:36:10">11:36:10</td>
 
-                                <td class="SKIPPED-text">10.05</td>
+                                <td class="SKIPPED-text">10.24</td>
                             </tr>
 
                             <tr class="test-SKIPPED">
@@ -1094,9 +1094,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SKIPPED-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-04-23 11:09:18">11:09:18</td>
+                                <td class="SKIPPED-text" data-sort="2018-04-25 11:36:21">11:36:21</td>
 
-                                <td class="SKIPPED-text">10.24</td>
+                                <td class="SKIPPED-text">10.14</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1117,16 +1117,16 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:09:28">11:09:28</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:36:31">11:36:31</td>
 
-                                <td class="SUCCESS-text">8.28</td>
+                                <td class="SUCCESS-text">11.65</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="f18a1b513f0d9012ea49ca3527dd1e51d9ffd5d468b9d21d5e52adb6540fad85.html" class="ellipsis"
@@ -1137,35 +1137,35 @@ I want to run the daily regressions at least twice a day</div>
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">308</td>
+                                <td class="SUCCESS-text">308</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-04-23 11:09:36">11:09:36</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:36:43">11:36:43</td>
 
-                                <td class="SKIPPED-text">145.58</td>
+                                <td class="SUCCESS-text">199.61</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-FAILURE">
+                                <td><span class="summary-icon"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">FAILURE</span></td>
+                                <td class="FAILURE-text">
                                     <div class="ellipsis">
 
                                         <a href="3e2f30f4eefe9e59de74b6f67e41005e7c4e51f71890c5f4388d2ad53a915215.html" class="ellipsis"
-                                           title="Homepage - Footer - All the links in 'Additional Links' ">
+                                           title="Homepage - Footer - All the links in 'Additional Links' Comparison failure: expected:(...www....">
                                             Homepage - Footer - All the links in &quot;Additional Links&quot;&nbsp;(17  examples)
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">119</td>
+                                <td class="FAILURE-text">119</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-04-23 11:12:02">11:12:02</td>
+                                <td class="FAILURE-text" data-sort="2018-04-25 11:40:02">11:40:02</td>
 
-                                <td class="SKIPPED-text">46.71</td>
+                                <td class="FAILURE-text">90.79</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1186,9 +1186,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">4</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:12:49">11:12:49</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:41:33">11:41:33</td>
 
-                                <td class="SUCCESS-text">3.89</td>
+                                <td class="SUCCESS-text">3.97</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1209,9 +1209,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:12:53">11:12:53</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:41:37">11:41:37</td>
 
-                                <td class="SUCCESS-text">13.42</td>
+                                <td class="SUCCESS-text">6.1</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1232,9 +1232,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">63</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:13:06">11:13:06</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:41:43">11:41:43</td>
 
-                                <td class="SUCCESS-text">37.19</td>
+                                <td class="SUCCESS-text">53.37</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1255,9 +1255,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">63</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:13:43">11:13:43</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:42:36">11:42:36</td>
 
-                                <td class="SUCCESS-text">45.62</td>
+                                <td class="SUCCESS-text">117.92</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1278,9 +1278,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">14</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:14:29">11:14:29</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:44:34">11:44:34</td>
 
-                                <td class="SUCCESS-text">9.87</td>
+                                <td class="SUCCESS-text">8.76</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1301,9 +1301,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">35</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:14:39">11:14:39</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:44:43">11:44:43</td>
 
-                                <td class="SUCCESS-text">17.1</td>
+                                <td class="SUCCESS-text">23.55</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1324,9 +1324,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">21</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:14:56">11:14:56</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:45:07">11:45:07</td>
 
-                                <td class="SUCCESS-text">13.43</td>
+                                <td class="SUCCESS-text">15.79</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1347,9 +1347,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:15:09">11:15:09</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:45:23">11:45:23</td>
 
-                                <td class="SUCCESS-text">5.66</td>
+                                <td class="SUCCESS-text">7.65</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1370,9 +1370,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">8</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:15:15">11:15:15</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:45:30">11:45:30</td>
 
-                                <td class="SUCCESS-text">16.27</td>
+                                <td class="SUCCESS-text">16.63</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1393,9 +1393,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:15:31">11:15:31</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:45:47">11:45:47</td>
 
-                                <td class="SUCCESS-text">8.91</td>
+                                <td class="SUCCESS-text">9.11</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1416,9 +1416,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:15:40">11:15:40</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:45:56">11:45:56</td>
 
-                                <td class="SUCCESS-text">5.09</td>
+                                <td class="SUCCESS-text">5.62</td>
                             </tr>
 
                             <tr class="test-ERROR">
@@ -1439,9 +1439,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="ERROR-text">35</td>
 
 
-                                <td class="ERROR-text" data-sort="2018-04-23 11:15:45">11:15:45</td>
+                                <td class="ERROR-text" data-sort="2018-04-25 11:46:02">11:46:02</td>
 
-                                <td class="ERROR-text">41.57</td>
+                                <td class="ERROR-text">56.9</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1462,9 +1462,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:16:27">11:16:27</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:46:59">11:46:59</td>
 
-                                <td class="SUCCESS-text">9.88</td>
+                                <td class="SUCCESS-text">12.9</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1485,9 +1485,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:16:37">11:16:37</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:47:12">11:47:12</td>
 
-                                <td class="SUCCESS-text">8.41</td>
+                                <td class="SUCCESS-text">12.47</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1508,9 +1508,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:16:45">11:16:45</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:47:24">11:47:24</td>
 
-                                <td class="SUCCESS-text">13.66</td>
+                                <td class="SUCCESS-text">14.96</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1531,9 +1531,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:16:59">11:16:59</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:47:39">11:47:39</td>
 
-                                <td class="SUCCESS-text">24.2</td>
+                                <td class="SUCCESS-text">23.52</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1554,9 +1554,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">14</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:17:23">11:17:23</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:48:03">11:48:03</td>
 
-                                <td class="SUCCESS-text">31.67</td>
+                                <td class="SUCCESS-text">32.03</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1577,9 +1577,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:17:55">11:17:55</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:48:35">11:48:35</td>
 
-                                <td class="SUCCESS-text">6.7</td>
+                                <td class="SUCCESS-text">5.33</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1600,9 +1600,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:18:02">11:18:02</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:48:40">11:48:40</td>
 
-                                <td class="SUCCESS-text">9.12</td>
+                                <td class="SUCCESS-text">10.05</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1623,9 +1623,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:18:11">11:18:11</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:48:50">11:48:50</td>
 
-                                <td class="SUCCESS-text">9.01</td>
+                                <td class="SUCCESS-text">8.54</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1646,9 +1646,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:18:20">11:18:20</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:48:59">11:48:59</td>
 
-                                <td class="SUCCESS-text">7.21</td>
+                                <td class="SUCCESS-text">9.02</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1669,39 +1669,39 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:18:27">11:18:27</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:49:08">11:49:08</td>
 
-                                <td class="SUCCESS-text">7.39</td>
+                                <td class="SUCCESS-text">8.76</td>
                             </tr>
 
-                            <tr class="test-ERROR">
-                                <td><span class="summary-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">ERROR</span></td>
-                                <td class="ERROR-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="508410861dab6540f1b60be3af9304fb5dba558dbe274d274582448a42b91cf6.html" class="ellipsis"
-                                           title="(Spanish) Community Leaders - Type keyword into search bar No such element exception: The follow...">
+                                           title="(Spanish) Community Leaders - Type keyword into search bar ">
                                             (Spanish) Community Leaders - Type keyword into search bar
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="ERROR-text">6</td>
+                                <td class="SUCCESS-text">6</td>
 
 
-                                <td class="ERROR-text" data-sort="2018-04-23 11:18:35">11:18:35</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:49:17">11:49:17</td>
 
-                                <td class="ERROR-text">12.01</td>
+                                <td class="SUCCESS-text">11.06</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="8208e2312166f73b5f96ce1a258ab7201e71d6d60fba52157a195493cb0a1f13.html" class="ellipsis"
@@ -1712,35 +1712,35 @@ I want to run the daily regressions at least twice a day</div>
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">308</td>
+                                <td class="SUCCESS-text">308</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-04-23 11:18:47">11:18:47</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:49:28">11:49:28</td>
 
-                                <td class="SKIPPED-text">141.92</td>
+                                <td class="SUCCESS-text">230.92</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-FAILURE">
+                                <td><span class="summary-icon"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">FAILURE</span></td>
+                                <td class="FAILURE-text">
                                     <div class="ellipsis">
 
                                         <a href="5b77dd6ab1c106b2641a1cfd2e6e7f0170abf62eb7c98db96f5ca5be8efa5c28.html" class="ellipsis"
-                                           title="(Spanish) Homepage - Footer - All the links in 'Additional Links' ">
+                                           title="(Spanish) Homepage - Footer - All the links in 'Additional Links' Comparison failure: expected:(P[ol&ia...">
                                             (Spanish) Homepage - Footer - All the links in &quot;Additional Links&quot;&nbsp;(17  examples)
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">119</td>
+                                <td class="FAILURE-text">119</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-04-23 11:21:09">11:21:09</td>
+                                <td class="FAILURE-text" data-sort="2018-04-25 11:53:19">11:53:19</td>
 
-                                <td class="SKIPPED-text">46.65</td>
+                                <td class="FAILURE-text">89.82</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1761,9 +1761,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">4</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:21:56">11:21:56</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:54:49">11:54:49</td>
 
-                                <td class="SUCCESS-text">4.21</td>
+                                <td class="SUCCESS-text">3.99</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1784,9 +1784,9 @@ I want to run the daily regressions at least twice a day</div>
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-04-23 11:22:00">11:22:00</td>
+                                <td class="SUCCESS-text" data-sort="2018-04-25 11:54:53">11:54:53</td>
 
-                                <td class="SUCCESS-text">6.89</td>
+                                <td class="SUCCESS-text">6.13</td>
                             </tr>
                         </tbody>
                     </table>
