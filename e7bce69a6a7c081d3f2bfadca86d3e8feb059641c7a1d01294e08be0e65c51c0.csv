@@ -1,4 +1,2 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Regression checklist","Homepage - Address Look-Up - Declared disasters","ERROR","2018-05-03T11:40:48.608-04:00[America/New_York]","0.0","15.86"
-"Regression checklist","Address Look-Up - Declared disasters","ERROR","2018-05-03T11:41:04.736-04:00[America/New_York]","0.0","17.78"
-"Regression checklist","Find Assistance - Dynamically verify results of the questionnaire","FAILURE","2018-05-03T11:41:37.167-04:00[America/New_York]","0.0","37.87"
+"Regression checklist","Community Leaders - Type keyword into search bar","ERROR","2018-05-08T11:22:41.127-04:00[America/New_York]","0.0","16.63"
