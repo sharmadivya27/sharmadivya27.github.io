@@ -1,3 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Regression checklist","Find Assistance - Dynamically verify results of the questionnaire","FAILURE","2018-05-03T11:41:37.167-04:00[America/New_York]","0.0","37.87"
-"Regression checklist spanish","(Spanish) Find Assistance - All the functionality of the FOA questionnaire","FAILURE","2018-05-03T11:53:28.145-04:00[America/New_York]","0.0","40.87"
+"Regression checklist","Community Leaders - Results of the quick search items","FAILURE","2018-05-13T12:48:39.226-04:00[America/New_York]","0.0","30.16"
+"Regression checklist spanish","(Spanish) Community Leaders - Results of the quick search items","FAILURE","2018-05-13T12:59:03.69-04:00[America/New_York]","0.0","36.59"

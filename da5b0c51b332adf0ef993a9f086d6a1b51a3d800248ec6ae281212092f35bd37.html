@@ -53,13 +53,13 @@
     <script class="code" type="text/javascript">$(document).ready(function () {
         var test_results_plot = $.jqplot('test_results_pie_chart', [
             [
-                ['Passing', 0],
+                ['Passing', 0.8],
                 
                 ['Pending', 0],
                 
                 ['Ignored/Skipped', 0],
                 
-                ['Failing', 1],
+                ['Failing', 0.2],
                 
                 ['Errors',  0],
                 ['Compromised',  0]
@@ -92,24 +92,24 @@
                 marginTop: '15px'
             },
             series: [
-                {label: '0 / 2 tests passed' },
-                {label: '0 / 2 tests pending'},
-                {label: '0 / 2 tests not executed'},
-                {label: '2 / 2 tests failed'},
-                {label: '0 / 2 errors'},
-                {label: '0 / 2 compromised tests'}
+                {label: '8 / 10 tests passed' },
+                {label: '0 / 10 tests pending'},
+                {label: '0 / 10 tests not executed'},
+                {label: '2 / 10 tests failed'},
+                {label: '0 / 10 errors'},
+                {label: '0 / 10 compromised tests'}
             ]
         });
 
         var weighted_test_results_plot = $.jqplot('weighted_test_results_pie_chart', [
             [
-                ['Passing', 0],
+                ['Passing', 0.8],
                 
                 ['Pending', 0],
                 
                 ['Ignored', 0],
                 
-                ['Failing', 1],
+                ['Failing', 0.2],
                 
                 ['Errors', 0],
                 ['Compromised', 0],
@@ -143,11 +143,11 @@
                 marginTop: '15px'
             },
             series: [
-                {label: '0 / 2 tests passed (0% of all test steps)' },
-                {label: '0 / 2 tests pending'},
-                {label: '0 / 2 tests not executed'},
-                {label: '2 / 2 tests failed (1% of all test steps)'},
-                {label: '0 / 2 errors (0% of all test steps)'}
+                {label: '8 / 10 tests passed (0.8% of all test steps)' },
+                {label: '0 / 10 tests pending'},
+                {label: '0 / 10 tests not executed'},
+                {label: '2 / 10 tests failed (0.2% of all test steps)'},
+                {label: '0 / 10 errors (0% of all test steps)'}
             ]
         });
 
@@ -218,7 +218,7 @@
             <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 03-05-2018 12:00</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 13-05-2018 13:06</span>
     <br style="clear:left"/>
 </div>
 <div class="clr"></div>
@@ -233,7 +233,8 @@
         <td width="375px" valign="top">
             <div class="test-count-summary">
                 <span class="test-count-title">2
-                    test scenarios </span>
+                    test scenarios (10 tests in all, including 10
+                    rows of test data)</span>
                 <div>
 
                     <span class="test-count"> |
@@ -298,9 +299,9 @@ errors
         <body>
         <tr>
             <td class="summary-leading-column">Automated</td>
-            <td>2</td>
-            <td>0 (0%)</td>
-            <td>2 (100%)</td>
+            <td>10</td>
+            <td>8 (80%)</td>
+            <td>2 (20%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
         </tr>
@@ -314,15 +315,15 @@ errors
         </tr>
         <tr>
             <td class="summary-leading-column">Total</td>
-            <td>2</td>
-            <td>0 (0%)</td>
-            <td>2 (100%)</td>
+            <td>10</td>
+            <td>8 (80%)</td>
+            <td>2 (20%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
         </tr>
         <tr>
             <td class="summary-leading-column">Total Duration</td>
-                <td colspan="5">1 minutes 18 seconds</td>
+                <td colspan="5">1 minutes 6 seconds</td>
         </tr>
         </body>
     </table>
@@ -353,27 +354,27 @@ errors
 
                         <table>
                             <tr>
-                                <td class="related-tag-percentage"><span title="0 out of 2 tests (0 steps) passing">0%</span></td>
+                                <td class="related-tag-percentage"><span title="8 out of 10 tests (0 steps) passing">80%</span></td>
                                 <td width="150px">
                                     <a href="860287b5c250bb669bac0c572c45a1e03de4dacc9ea918579decc2d513db0d5c.html">
                                         <div class="pendingbar"
-                                             title="0 out of 2 tests (0 steps) pending"
+                                             title="0 out of 10 tests (0 steps) pending"
                                              style="width: 150px;">
                                             <div class="ignoredbar"
                                                  style="width: 150px;"
-                                                 title="0 out of 2 tests (0 steps) skipped or ignored">
+                                                 title="0 out of 10 tests (0 steps) skipped or ignored">
                                                 <div class="compromisedbar"
                                                      style="width: 150px;"
-                                                     title="0 out of 2 tests (0 steps) compromised">
+                                                     title="0 out of 10 tests (0 steps) compromised">
                                                     <div class="errorbar"
                                                          style="width: 150px;"
-                                                         title="0 out of 2 tests (0 steps) broken">
+                                                         title="0 out of 10 tests (0 steps) broken">
                                                         <div class="failingbar"
                                                              style="width: 150px;"
-                                                             title="2 out of 2 tests (16 steps) failing">
+                                                             title="2 out of 10 tests (70 steps) failing">
                                                             <div class="passingbar"
-                                                                 style="width: 0px;"
-                                                                 title="0 out of 2 tests (0 steps) passing">
+                                                                 style="width: 120px;"
+                                                                 title="8 out of 10 tests (0 steps) passing">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -382,7 +383,7 @@ errors
                                         </div>
                                     </a>
                                 </td>
-                                <td class="related-tag-count"><span class="result-test-count" title="2 tests">2</span></td>
+                                <td class="related-tag-count"><span class="result-test-count" title="10 tests">10</span></td>
                             </tr>
                         </table>
                     </td>
@@ -405,27 +406,27 @@ errors
 
                         <table>
                             <tr>
-                                <td class="related-tag-percentage"><span title="0 out of 1 tests (0 steps) passing">0%</span></td>
+                                <td class="related-tag-percentage"><span title="4 out of 5 tests (0 steps) passing">80%</span></td>
                                 <td width="150px">
                                     <a href="9a48091cff6e8772525a21170de2b17cb0ae7a4cd5922fc606678dedadefb27c.html">
                                         <div class="pendingbar"
-                                             title="0 out of 1 tests (0 steps) pending"
+                                             title="0 out of 5 tests (0 steps) pending"
                                              style="width: 150px;">
                                             <div class="ignoredbar"
                                                  style="width: 150px;"
-                                                 title="0 out of 1 tests (0 steps) skipped or ignored">
+                                                 title="0 out of 5 tests (0 steps) skipped or ignored">
                                                 <div class="compromisedbar"
                                                      style="width: 150px;"
-                                                     title="0 out of 1 tests (0 steps) compromised">
+                                                     title="0 out of 5 tests (0 steps) compromised">
                                                     <div class="errorbar"
                                                          style="width: 150px;"
-                                                         title="0 out of 1 tests (0 steps) broken">
+                                                         title="0 out of 5 tests (0 steps) broken">
                                                         <div class="failingbar"
                                                              style="width: 150px;"
-                                                             title="1 out of 1 tests (6 steps) failing">
+                                                             title="1 out of 5 tests (35 steps) failing">
                                                             <div class="passingbar"
-                                                                 style="width: 0px;"
-                                                                 title="0 out of 1 tests (0 steps) passing">
+                                                                 style="width: 120px;"
+                                                                 title="4 out of 5 tests (0 steps) passing">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -434,7 +435,7 @@ errors
                                         </div>
                                     </a>
                                 </td>
-                                <td class="related-tag-count"><span class="result-test-count" title="1 test">1</span></td>
+                                <td class="related-tag-count"><span class="result-test-count" title="5 tests">5</span></td>
                             </tr>
                         </table>
                     </td>
@@ -450,27 +451,27 @@ errors
 
                         <table>
                             <tr>
-                                <td class="related-tag-percentage"><span title="0 out of 1 tests (0 steps) passing">0%</span></td>
+                                <td class="related-tag-percentage"><span title="4 out of 5 tests (0 steps) passing">80%</span></td>
                                 <td width="150px">
                                     <a href="97be23141df29e9bc479938d306985c783ca95f9f8f2ecba1b218b94855299a6.html">
                                         <div class="pendingbar"
-                                             title="0 out of 1 tests (0 steps) pending"
+                                             title="0 out of 5 tests (0 steps) pending"
                                              style="width: 150px;">
                                             <div class="ignoredbar"
                                                  style="width: 150px;"
-                                                 title="0 out of 1 tests (0 steps) skipped or ignored">
+                                                 title="0 out of 5 tests (0 steps) skipped or ignored">
                                                 <div class="compromisedbar"
                                                      style="width: 150px;"
-                                                     title="0 out of 1 tests (0 steps) compromised">
+                                                     title="0 out of 5 tests (0 steps) compromised">
                                                     <div class="errorbar"
                                                          style="width: 150px;"
-                                                         title="0 out of 1 tests (0 steps) broken">
+                                                         title="0 out of 5 tests (0 steps) broken">
                                                         <div class="failingbar"
                                                              style="width: 150px;"
-                                                             title="1 out of 1 tests (10 steps) failing">
+                                                             title="1 out of 5 tests (35 steps) failing">
                                                             <div class="passingbar"
-                                                                 style="width: 0px;"
-                                                                 title="0 out of 1 tests (0 steps) passing">
+                                                                 style="width: 120px;"
+                                                                 title="4 out of 5 tests (0 steps) passing">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -479,7 +480,7 @@ errors
                                         </div>
                                     </a>
                                 </td>
-                                <td class="related-tag-count"><span class="result-test-count" title="1 test">1</span></td>
+                                <td class="related-tag-count"><span class="result-test-count" title="5 tests">5</span></td>
                             </tr>
                         </table>
                     </td>
@@ -494,7 +495,7 @@ errors
                     <table>
                         <tr>
                             <td colspan="2">
-                                <span class="caption">Test results weighted by test size in steps (average steps per test: 8) .</span>
+                                <span class="caption">Test results weighted by test size in steps (average steps per test: 7) .</span>
                                 <span class="togglePieChart" id="toggleWeightedPieChart"><a href="#">Show/Hide Pie
                                     Chart</a></span>
                             </td>
@@ -526,9 +527,9 @@ errors
         <body>
         <tr>
             <td class="summary-leading-column">Automated</td>
-            <td>2</td>
-            <td>0 (0%)</td>
-            <td>2 (100%)</td>
+            <td>10</td>
+            <td>8 (80%)</td>
+            <td>2 (20%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
         </tr>
@@ -542,15 +543,15 @@ errors
         </tr>
         <tr>
             <td class="summary-leading-column">Total</td>
-            <td>2</td>
-            <td>0 (0%)</td>
-            <td>2 (100%)</td>
+            <td>10</td>
+            <td>8 (80%)</td>
+            <td>2 (20%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
         </tr>
         <tr>
             <td class="summary-leading-column">Total Duration</td>
-                <td colspan="5">1 minutes 18 seconds</td>
+                <td colspan="5">1 minutes 6 seconds</td>
         </tr>
         </body>
     </table>
@@ -581,27 +582,27 @@ errors
 
                         <table>
                             <tr>
-                                <td class="related-tag-percentage"><span title="0 out of 2 tests (0 steps) passing">0%</span></td>
+                                <td class="related-tag-percentage"><span title="8 out of 10 tests (0 steps) passing">80%</span></td>
                                 <td width="150px">
                                     <a href="860287b5c250bb669bac0c572c45a1e03de4dacc9ea918579decc2d513db0d5c.html">
                                         <div class="pendingbar"
-                                             title="0 out of 2 tests (0 steps) pending"
+                                             title="0 out of 10 tests (0 steps) pending"
                                              style="width: 150px;">
                                             <div class="ignoredbar"
                                                  style="width: 150px;"
-                                                 title="0 out of 2 tests (0 steps) skipped or ignored">
+                                                 title="0 out of 10 tests (0 steps) skipped or ignored">
                                                 <div class="compromisedbar"
                                                      style="width: 150px;"
-                                                     title="0 out of 2 tests (0 steps) compromised">
+                                                     title="0 out of 10 tests (0 steps) compromised">
                                                     <div class="errorbar"
                                                          style="width: 150px;"
-                                                         title="0 out of 2 tests (0 steps) broken">
+                                                         title="0 out of 10 tests (0 steps) broken">
                                                         <div class="failingbar"
                                                              style="width: 150px;"
-                                                             title="2 out of 2 tests (16 steps) failing">
+                                                             title="2 out of 10 tests (70 steps) failing">
                                                             <div class="passingbar"
-                                                                 style="width: 0px;"
-                                                                 title="0 out of 2 tests (0 steps) passing">
+                                                                 style="width: 120px;"
+                                                                 title="8 out of 10 tests (0 steps) passing">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -610,7 +611,7 @@ errors
                                         </div>
                                     </a>
                                 </td>
-                                <td class="related-tag-count"><span class="result-test-count" title="2 tests">2</span></td>
+                                <td class="related-tag-count"><span class="result-test-count" title="10 tests">10</span></td>
                             </tr>
                         </table>
                     </td>
@@ -633,27 +634,27 @@ errors
 
                         <table>
                             <tr>
-                                <td class="related-tag-percentage"><span title="0 out of 1 tests (0 steps) passing">0%</span></td>
+                                <td class="related-tag-percentage"><span title="4 out of 5 tests (0 steps) passing">80%</span></td>
                                 <td width="150px">
                                     <a href="9a48091cff6e8772525a21170de2b17cb0ae7a4cd5922fc606678dedadefb27c.html">
                                         <div class="pendingbar"
-                                             title="0 out of 1 tests (0 steps) pending"
+                                             title="0 out of 5 tests (0 steps) pending"
                                              style="width: 150px;">
                                             <div class="ignoredbar"
                                                  style="width: 150px;"
-                                                 title="0 out of 1 tests (0 steps) skipped or ignored">
+                                                 title="0 out of 5 tests (0 steps) skipped or ignored">
                                                 <div class="compromisedbar"
                                                      style="width: 150px;"
-                                                     title="0 out of 1 tests (0 steps) compromised">
+                                                     title="0 out of 5 tests (0 steps) compromised">
                                                     <div class="errorbar"
                                                          style="width: 150px;"
-                                                         title="0 out of 1 tests (0 steps) broken">
+                                                         title="0 out of 5 tests (0 steps) broken">
                                                         <div class="failingbar"
                                                              style="width: 150px;"
-                                                             title="1 out of 1 tests (6 steps) failing">
+                                                             title="1 out of 5 tests (35 steps) failing">
                                                             <div class="passingbar"
-                                                                 style="width: 0px;"
-                                                                 title="0 out of 1 tests (0 steps) passing">
+                                                                 style="width: 120px;"
+                                                                 title="4 out of 5 tests (0 steps) passing">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -662,7 +663,7 @@ errors
                                         </div>
                                     </a>
                                 </td>
-                                <td class="related-tag-count"><span class="result-test-count" title="1 test">1</span></td>
+                                <td class="related-tag-count"><span class="result-test-count" title="5 tests">5</span></td>
                             </tr>
                         </table>
                     </td>
@@ -678,27 +679,27 @@ errors
 
                         <table>
                             <tr>
-                                <td class="related-tag-percentage"><span title="0 out of 1 tests (0 steps) passing">0%</span></td>
+                                <td class="related-tag-percentage"><span title="4 out of 5 tests (0 steps) passing">80%</span></td>
                                 <td width="150px">
                                     <a href="97be23141df29e9bc479938d306985c783ca95f9f8f2ecba1b218b94855299a6.html">
                                         <div class="pendingbar"
-                                             title="0 out of 1 tests (0 steps) pending"
+                                             title="0 out of 5 tests (0 steps) pending"
                                              style="width: 150px;">
                                             <div class="ignoredbar"
                                                  style="width: 150px;"
-                                                 title="0 out of 1 tests (0 steps) skipped or ignored">
+                                                 title="0 out of 5 tests (0 steps) skipped or ignored">
                                                 <div class="compromisedbar"
                                                      style="width: 150px;"
-                                                     title="0 out of 1 tests (0 steps) compromised">
+                                                     title="0 out of 5 tests (0 steps) compromised">
                                                     <div class="errorbar"
                                                          style="width: 150px;"
-                                                         title="0 out of 1 tests (0 steps) broken">
+                                                         title="0 out of 5 tests (0 steps) broken">
                                                         <div class="failingbar"
                                                              style="width: 150px;"
-                                                             title="1 out of 1 tests (10 steps) failing">
+                                                             title="1 out of 5 tests (35 steps) failing">
                                                             <div class="passingbar"
-                                                                 style="width: 0px;"
-                                                                 title="0 out of 1 tests (0 steps) passing">
+                                                                 style="width: 120px;"
+                                                                 title="4 out of 5 tests (0 steps) passing">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -707,7 +708,7 @@ errors
                                         </div>
                                     </a>
                                 </td>
-                                <td class="related-tag-count"><span class="result-test-count" title="1 test">1</span></td>
+                                <td class="related-tag-count"><span class="result-test-count" title="5 tests">5</span></td>
                             </tr>
                         </table>
                     </td>
@@ -750,20 +751,20 @@ errors
                                 <td class="FAILURE-text">
                                     <div class="ellipsis">
 
-                                        <a href="5d0e119e1a9e113d2275be0f71b3e3c6804a244bea999ac6ca1135449c747c0e.html" class="ellipsis"
-                                           title="Find Assistance - Dynamically verify results of the questionnaire Assertion error: expected:(62) but wa...">
-                                            Find Assistance - Dynamically verify results of the questionnaire
+                                        <a href="80d55cb57c731780080b2fb58c8bb91d9004dc1a432c0e93ed1ec33559c308bd.html" class="ellipsis"
+                                           title="Community Leaders - Results of the quick search items Assertion error">
+                                            Community Leaders - Results of the quick search items&nbsp;(5  examples)
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="FAILURE-text">6</td>
+                                <td class="FAILURE-text">35</td>
 
 
-                                <td class="FAILURE-text" data-sort="2018-05-03 11:41:37">11:41:37</td>
+                                <td class="FAILURE-text" data-sort="2018-05-13 12:48:39">12:48:39</td>
 
-                                <td class="FAILURE-text">37.87</td>
+                                <td class="FAILURE-text">30.16</td>
                             </tr>
 
                             <tr class="test-FAILURE">
@@ -773,20 +774,20 @@ errors
                                 <td class="FAILURE-text">
                                     <div class="ellipsis">
 
-                                        <a href="57680224d7d04f6c4f78342203ff401e139817cab23a45a063c967ab31f7c7de.html" class="ellipsis"
-                                           title="(Spanish) Find Assistance - All the functionality of the FOA questionnaire Assertion error: expected:(62) but wa...">
-                                            (Spanish) Find Assistance - All the functionality of the FOA questionnaire
+                                        <a href="3cb70303383ce086459b1d86f4b5a750c5b0dc8ad4802e58a1a3e847f08aa5e1.html" class="ellipsis"
+                                           title="(Spanish) Community Leaders - Results of the quick search items Assertion error">
+                                            (Spanish) Community Leaders - Results of the quick search items&nbsp;(5  examples)
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="FAILURE-text">10</td>
+                                <td class="FAILURE-text">35</td>
 
 
-                                <td class="FAILURE-text" data-sort="2018-05-03 11:53:28">11:53:28</td>
+                                <td class="FAILURE-text" data-sort="2018-05-13 12:59:03">12:59:03</td>
 
-                                <td class="FAILURE-text">40.87</td>
+                                <td class="FAILURE-text">36.59</td>
                             </tr>
                         </tbody>
                     </table>
